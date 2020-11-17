@@ -27,10 +27,10 @@ export default function Navbar() {
                 <Link href="#"><a onClick={toggle} className="text-sm hover:text-orange-500">Presentation</a></Link>
                 <Link href="#"><a onClick={toggle} className="text-sm hover:text-orange-500">Testimonials</a></Link>
                 <div className="flex space-x-4 pt-4 md:pt-0 md:pl-4">
-                    <Link href="#"><a onClick={toggle} className="text-sm hover:text-orange-500"><FontAwesomeIcon icon={faLinkedinIn} /></a></Link>
-                    <Link href="#"><a onClick={toggle} className="text-sm hover:text-orange-500"><FontAwesomeIcon icon={faGithub} /></a></Link>
-                    <Link href="#"><a onClick={toggle} className="text-sm hover:text-orange-500"><FontAwesomeIcon icon={faTwitter} /></a></Link>
-                    <Link href="#"><a onClick={toggle} className="text-sm hover:text-orange-500"><FontAwesomeIcon icon={faInstagram} /></a></Link>
+                    <Link href="https://www.linkedin.com/in/pauljadams/"><a target="_blank" onClick={toggle} className="text-sm hover:text-orange-500"><FontAwesomeIcon icon={faLinkedinIn} /></a></Link>
+                    <Link href="https://github.com/therealpadams"><a target="_blank" onClick={toggle} className="text-sm hover:text-orange-500"><FontAwesomeIcon icon={faGithub} /></a></Link>
+                    <Link href="https://twitter.com/therealpadams"><a target="_blank" onClick={toggle} className="text-sm hover:text-orange-500"><FontAwesomeIcon icon={faTwitter} /></a></Link>
+                    <Link href="https://www.instagram.com/therealpadams/"><a target="_blank" onClick={toggle} className="text-sm hover:text-orange-500"><FontAwesomeIcon icon={faInstagram} /></a></Link>
                 </div>
             </nav>
         </header>
