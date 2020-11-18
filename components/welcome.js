@@ -1,6 +1,6 @@
 export default function Welcome() {
     return (
-        <section className="w-full py-20">
+        <section className="w-full py-12">
             <h2 className="text-2xl">
                 Welcome to Baggerspion
             </h2>
