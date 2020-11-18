@@ -2,6 +2,7 @@ import HeroSection from '../components/hero-section'
 import Layout from '../components/layout'
 import { getAllPosts } from '../lib/api'
 import Head from 'next/head'
+import WelcomeSection from '../components/welcome'
 
 export default function Index({ allPosts }) {
   const heroPost = allPosts[0]
@@ -13,6 +14,7 @@ export default function Index({ allPosts }) {
           <title>Baggerspion</title>
         </Head>
         <HeroSection hero={heroPost} more={morePosts} /> 
+        <WelcomeSection />
       </Layout>
     </>
   )
