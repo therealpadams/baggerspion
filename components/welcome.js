@@ -1,6 +1,3 @@
-import { faBoxOpen, faPeopleCarry, faRunning } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 export default function Welcome() {
     return (
         <section className="w-full py-20">
