@@ -13,7 +13,7 @@ export default function Navbar() {
         <header className="md:flex sm:justify-between md:items-center py-6 border-black border-t-2">
             <div className="flex items-center justify-between">
                 <div>
-                    <span className="font-semibold text-2xl hover:text-orange-500"><Link href="/">Baggerspion.</Link></span>            
+                    <span className="font-semibold text-2xl hover:text-gray-500"><Link href="/">Baggerspion.</Link></span>            
                 </div>
                 <div className="md:hidden">
                     <button onClick={toggle} type="button" className="ml-8 block hover:text-orange-500 focus:outline-none">
