@@ -1,0 +1,146 @@
+{
+    "companies": [
+        {
+            "company": "Vercel",
+            "logo": "vercel.jpeg",
+            "description": "We enable frontend teams to develop, preview, and ship wonderful things. We're the creators of Next.js, the world's favorite React framework, and we're building the best tools and workflow for frontend development teams. Our goal is to bring developers the scale, reliability, and performance they need in their tools and infrastructure - so they can focus on creating delightful experiences for their users.",
+            "roles": [
+                {
+                    "title": "Managing Director, Germany",
+                    "start": "2020-11-01",
+                    "location": "Berlin / Germany"
+                }
+            ]
+        },
+        {
+            "company": "Scout24 Group",
+            "logo": "scout.png",
+            "description": "Scout24 AG uses digital marketplaces to inspire people to make important life decisions and bring them together with their new home. In addition to new colleagues, you can also expect an environment in which you can drive forward innovative ideas, as in a start-up. Success is created together, you make the decision yourself.",
+            "roles": [
+                {
+                    "title": "Director of Engineering",
+                    "start": "2020-06-01",
+                    "location": "Berlin / Germany"
+                }
+            ]
+        },
+        {
+            "company": "Wayfair",
+            "logo": "wayfair.png",
+            "description": "Wayfair Inc. is an American e-commerce company that sells home goods. Formerly known as CSN Stores, the company was founded in 2002 and now sells many home furnishings and décor items and over ten million products from over 10,000 suppliers. As part of the payments team I help lead a team which processes $billions of payments annually, with a focus on non-credit card payments.",
+            "roles": [
+                {
+                    "title": "Senior Engineering Manager",
+                    "start": "2019-07-01",
+                    "location": "Berlin / Germany"
+                }
+            ]
+        },
+        {
+            "company": "Swarm64",
+            "logo": "swarm64.png",
+            "description": "Swarm64 took on what experts consider the most valuable contribution to big data analytics: Enabling customers to extract maximum value from their data in real time by adding FPGA-accelerated analytics processing (OLAP) to the native transaction processing (OLTP) of popular open-source databases.",
+            "roles": [
+                {
+                    "title": "VP Engineering",
+                    "start": "2019-01-01",
+                    "location": "Berlin / Germany"
+                }
+            ]
+        },
+        {
+            "company": "Zalando",
+            "logo": "zalando.jpeg",
+            "description": "Zalando SE is a German electronic commerce company seated in Berlin. The company maintains a cross-platform online store that sells shoes, clothing and other fashion items. The company was founded in Germany in 2008, and since has begun operating in fourteen European countries and worldwide with spin-offs and subsidiary companies.",
+            "roles": [
+                {
+                    "title": "Open Source Lead",
+                    "start": "2018-03-01",
+                    "location": "Berlin / Germany"
+                },
+                {
+                    "title": "Engineering Lead",
+                    "start": "2017-07-01",
+                    "location": "Berlin / Germany"
+                }
+            ]
+        },
+       {
+            "company": "Crate.io",
+            "logo": "crate.png",
+            "description": "Crate is an open source, highly scalable, shared-nothing distributed SQL database. Crate offers the scalability and performance of a modern No-SQL database with the power of Standard SQL. Crate’s distributed SQL query engine lets you use the same syntax that already exists in your applications or integrations, and have queries seamlessly executed across the crate cluster, including any aggregations, if needed.",
+            "roles": [
+                {
+                    "title": "Engineering Manager",
+                    "start": "2016-03-01",
+                    "location": "Berlin / Germany"
+                }
+            ] 
+        },
+        {
+            "company": "KDAB",
+            "logo": "kdab.jpeg",
+            "description": "KDAB was the first Technical Solution Provider for Qt. For many years they have produced the training materials used in the Qt programming courses offered by the owners/developers of Qt. They continue to help develop parts of Qt and are one of the major contributors to the Qt Project. They can give advanced or standard trainings anywhere around the globe.",
+            "roles": [
+                {
+                    "title": "Director of Engineering",
+                    "start": "2015-03-01",
+                    "location": "Berlin / Germany"
+                },
+                {
+                    "title": "Regional Director, UK",
+                    "start": "2013-02-01",
+                    "location": "Stirling / UK"
+                }
+            ] 
+        },
+        {
+            "company": "Kolab Systems",
+            "logo": "kolab.png",
+            "description": "Kolab Systems AG is the professional company behind the Kolab Groupware Solution, the premier choice for everyone who wants peace of mind, freedom of choice and the ability to innovate. Founded in 2010 in Zürich, Switzerland, Kolab Systems has taken the place of the Kolab Konsortium which initially provided Kolab services primarily in German speaking areas from 2004 to 2010.",
+            "roles": [
+                {
+                    "title": "Chief Operating Officer",
+                    "start": "2010-05-01",
+                    "location": "Zurich / Switzerland"
+                }
+            ] 
+        },
+        {
+            "company": "Zope Europe Association",
+            "logo": "zea.jpeg",
+            "description": "Zea Partners was a non-profit network for companies building open source solutions. Stakeholders from the open source world were welcome. Zea activities were focused on growing the open source market by pooling resources for promotion, research and advocacy.",
+            "roles": [
+                {
+                    "title": "Research Manager",
+                    "start": "2009-05-01",
+                    "location": "Stirling / UK"
+                }
+            ] 
+        },
+        {
+            "company": "Sirius Corporation",
+            "logo": "sirius.png",
+            "description": "Sirius was founded in 1998 to bring organisations the high-performance low-cost benefits of Open Source software. An industry pioneer and expert in the field, Sirius is recognised by the UK Government, the Technology Press and Conferences around the UK and Europe as a leading voice in Open Source solutions.",
+            "roles": [
+                {
+                    "title": "Research & Projects Manager",
+                    "start": "2006-08-01",
+                    "location": "Weybridge / UK"
+                }
+            ] 
+        },
+        {
+            "company": "University of Lincoln",
+            "logo": "lincoln.png",
+            "description": "The University of Lincoln is a public research university in the city of Lincoln, England. The university has origins tracing back to 186 and after gaining university status in 1992, was known as the University of Humberside until 1996 and the University of Lincolnshire and Humberside until 2001, when it adopted its present name.",
+            "roles": [
+                {
+                    "title": "Research Associate",
+                    "start": "2004-09-01",
+                    "location": "Lincoln / UK"
+                }
+            ] 
+        }
+    ]
+}

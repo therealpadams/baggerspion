@@ -1,0 +1,76 @@
+{
+    "testimonials": [
+        {
+            "name": "Mathias Hasselmann",
+            "image": "mathias.jpg",
+            "affilliation": "Software Firefighter",
+            "content": "He impressed me several times with is ability to read customers within no time: Their needs, their wishes, their fears. This gift helped him several times to significantly improve customer projects when his colleagues had failed."
+        },
+        {
+            "name": "Kevin Ottens",
+            "image": "kevin.jpg",
+            "affilliation": "Libre Software Craftsman",
+            "content": "He is also a professional with a very good knowledge of people dynamics (based on science and also on feelings). That makes him a perfect fit for servant leadership of most teams I can think of."
+        },
+        {
+            "name": "Tom Callway",
+            "image": "tom.jpg",
+            "affilliation": "Product Marketing, Rancher Labs",
+            "content": "Paul is a hugely capable and knowledgeable FOSS advocate who can turn his hand to almost everything. He was highly regarded by his colleagues at Sirius for his professionalism and great sense of humour."
+        },
+        {
+            "name": "Grigor Ambrumyan",
+            "image": "grigor.jpg",
+            "affilliation": "Senior Software Engineer, Wayfair",
+            "content": "Few people have the opportunity to report to a manager who is also a coach and mentor — but I did when he was my Engineering Manager at Wayfair. Any employee would be lucky to have Paul as a manager."
+        },
+        {
+            "name": "Thomas Richter",
+            "image": "thomas.jpg",
+            "affilliation": "Founder & CEO, Swarm64",
+            "content": "His broad network of business relationships was able to help us with tough challenges and is a testament to his excellent character and style - it is great fun to work with Paul."
+        },
+        {
+            "name": "Ferit Topcu",
+            "image": "ferit.jpg",
+            "affilliation": "Senior Software Engineer, Zalando",
+            "content": "One of the best Lead’s I’ve met during my career (5+ years). He combines the three most important aspects one expects from a Team Lead: a deep technical knowledge, a great mentor and leader towards a shared goal."
+        },
+        {
+            "name": "Dr. Mikio Braun",
+            "image": "mikio.jpg",
+            "affilliation": "Staff Data Scientist, GetYourGuide",
+            "content": "Paul is one of the most experienced and effective leads I have worked with. I think what makes Paul so great is his strong background in agile methodology, technical expertise, and a very human centric approach to management."
+        },
+        {
+            "name": "Aditya Varun Chadra",
+            "image": "adi.jpg",
+            "affilliation": "Engineering & Science for Search, Relevance and Discovery",
+            "content": "Paul has a deep understanding of core technology, which in combination with his leadership acumen is hard to top. I looked to Paul on many occasions to spar about core technology decisions, and the conversation was always pertinent and enriching for me."
+        },
+        {
+            "name": "Christian Lutz",
+            "image": "christian.jpg",
+            "affilliation": "Founder & CEO, Crate.io",
+            "content": "Paul builds and nurtures engineering teams. If your engineering team needs a people leader with a strong background in agility, you would be lucky to work with Paul."
+        },
+        {
+            "name": "Jessica Rose",
+            "image": "jess.jpg",
+            "affilliation": "Technical Outreach",
+            "content": "Paul is an incredible leader, drawing from an interest in servant leadership. He communicates clearly across teams with diverse language skills and perspectives. I can unreservedly recommend Paul for any tech leadership role."
+        },
+        {
+            "name": "Marios Trivyzas",
+            "image": "marios.jpg",
+            "affilliation": "Elasticsearch Engineer, SQL at Elastic",
+            "content": "He has always worked in a manner of consulting the engineering teams and help improve productivity rather than micromanage and force processes which is really hard to find in the IT world."
+        },
+        {
+            "name": "Meriam Kharbat",
+            "image": "meriam.jpg",
+            "affilliation": "Software Engineer, Field Intelligence Inc ",
+            "content": "When I think about the people that have made a positive impact on my career, I think of Paul. He always ensured that we were on track and headed in the right direction. It is a joy in every way to work with Paul, I am grateful for the time we were able to work together."
+        }
+    ]
+}

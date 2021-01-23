@@ -1,0 +1,107 @@
+{
+    "presentations": [
+        {
+            "title": "HTAP By Accident",
+            "event": "Postgres Vision",
+            "date": "2019-06-26",
+            "location": "Boston / USA",
+            "web": "https://pgv2019.sched.com/event/Q1Qm/htap-by-accident-getting-more-from-postgresql-using-hardware-acceleration",
+            "slides": "https://speakerdeck.com/player/1e77ff407bb3485eb15d9db316fd394d"
+        },
+        {
+            "title": "Adopting Open Source Best Practice for the Enterprise",
+            "event": "Codemotion",
+            "date": "2018-11-21",
+            "location": "Berlin / Germany",
+            "web": "https://berlin2018.codemotionworld.com/talk-detail/?detail=10425",
+            "slides": "https://speakerdeck.com/player/5453b4526c2c4d0698f0f8f20df1f25c"
+        },
+        {
+            "title": "The Art of the Pull Request",
+            "event": "foss-north",
+            "date": "2018-04-18",
+            "location": "Gothenburg / Sweden",
+            "web": "https://foss-north.se/2018/speakers-and-talks.html",
+            "slides": "https://speakerdeck.com/player/75ae5292b0e443cca00f3511a692d915"
+        },
+        {
+            "title": "An Incident Post-Mortem",
+            "event": "GOTO",
+            "date": "2017-11-17",
+            "location": "Berlin / Germany",
+            "web": "https://gotober.com/2017/sessions/332/an-incident-post-mortem",
+            "slides": "https://speakerdeck.com/player/d08344f0f0534411b027bc6cbabe25a7"
+        },
+        {
+            "title": "Containers Are Not VMs!",
+            "event": "Nextcloud Conference",
+            "date": "2017-08-27",
+            "location": "Berlin / Germany",
+            "web": "https://nextcloud.com/de/conf-2017/",
+            "slides": "https://speakerdeck.com/player/9787a8f0fa8547d0be01270f230a1c49"
+        },
+        {
+            "title": "Automating CrateDB with Habitat",
+            "event": "Chef Meetup",
+            "date": "2017-06-28",
+            "location": "Berlin / Germany",
+            "web": "https://www.meetup.com/berlin-chefs/events/240664611/",
+            "slides": "https://speakerdeck.com/player/0d1fe68ad83f4bb29f3976ee6655181f"
+        },
+        {
+            "title": "Really Big Data in Real-Time: IoT Machine Data Processing in CrateDB & Grafana",
+            "event": "SQL NYC Meetup",
+            "date": "2016-12-01",
+            "location": "New York / USA",
+            "web": "https://www.meetup.com/de-DE/Downtown-NYC-Tech-Meetup/events/231620976/"
+        },
+        {
+            "title": "Using Grafana and CrateDB",
+            "event": "GrafanaCon",
+            "date": "2016-12-01",
+            "location": "New York / USA",
+            "web": "https://www.grafanacon.org/2016/schedule",
+            "slides": "https://speakerdeck.com/player/1eb5b2f7aeee4117b8cd018d931a9d01"
+        },
+        {
+            "title": "Orchestrating Your Data Layer With Docker Engine 1.12",
+            "event": "Docker Meetup",
+            "date": "2016-10-06",
+            "location": "Berlin / Germany",
+            "web": "https://www.meetup.com/Docker-Berlin/events/234237119/",
+            "slides": "https://speakerdeck.com/player/24485b6e750e4fddb4d166558a332a0c"
+        },
+        {
+            "title": "Judas Priest Ate My ScrumMaster",
+            "event": "Write The Docs",
+            "date": "2015-09-01",
+            "location": "Prague / Czechia",
+            "web": "https://www.writethedocs.org/conf/eu/2015/speakers/#speaker-padams",
+            "slides": "https://speakerdeck.com/player/9ba9761058fb4bb3bc7e5b6c19a4fde7"
+        },
+        {
+            "title": "Pac-Man: The Original Troll",
+            "event": "Ignite",
+            "date": "2015-07-11",
+            "location": "Berlin / Germany",
+            "web": "http://igniteberlin.com/2015/07/11/paul-adams/",
+            "slides": "https://speakerdeck.com/player/2c1364bd17484b8e9b3aea61a9396267"
+        },
+        {
+            "title": "David Faure Breaks The Law?!",
+            "event": "Akademy",
+            "date": "2014-09-07",
+            "location": "Brno / Czechia",
+            "web": "https://conf.kde.org/en/Akademy2014/public/events/167",
+            "slides": "https://speakerdeck.com/player/3e2af7701a520132598a3e40557769d4"
+        },
+        {
+            "title": "No Onion In My Salad: How To Manage Emerging Communities",
+            "event": "Write The Docs Unconference",
+            "date": "2014-07-19",
+            "location": "Berlin / Germany",
+            "web": "http://conf.writethedocs.org/eu/2014/unconf-berlin.html",
+            "slides": "https://speakerdeck.com/player/cb0f5920f15c0131e17626e0503a2608"
+        }
+    ]
+}
