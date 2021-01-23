@@ -5,13 +5,15 @@ import Link from 'next/link'
 export default function Abstract({ link, meta }) {
     return (
         <div className="flex flex-row space-x-4">
-            <div style={{height: '65px'}} className="relative w-1/5">
+	    <div className="flex-shrink-0">
                 <Image
                     src={`/assets/cover/${meta.image}`}
-                    layout="fill"
+                    layout="fixed"
+		    width={100}
+	   	    height={65}
                     objectFit="cover"
                 />
-            </div>
+	    </div>
             <div className="flex flex-col">
                 <Link href={`/blog${link}`}>
                     <a className="hover:text-yellow-500">
