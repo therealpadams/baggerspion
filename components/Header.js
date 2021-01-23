@@ -16,7 +16,7 @@ export default function Header({ meta }) {
                     objectFit="cover"
                 />
             </div>
-            {meta.author ? <AuthorDetail author={meta.author} date={meta.date} /> : ""}
+            {meta.author.name ? <AuthorDetail author={meta.author} date={meta.date} /> : ""}
         </>
     )
 }
