@@ -11,6 +11,7 @@ export default function BlogPostLayout({ meta, children }) {
         img: Figure
     }
     const router = useRouter()
+    const domain = router.asPath
 
     return (
         <>
@@ -18,7 +19,7 @@ export default function BlogPostLayout({ meta, children }) {
                 <meta name="twitter:card" content="summary" key="twcard" />
                 <meta name="twitter:creator" content={meta.author.twitter} key="twhandle" />
 
-                <meta property="og:url" content={router.pathname} key="ogurl" />
+                <meta property="og:url" content={domain} key="ogurl" />
                 <meta property="og:image" content={`${router.pathname}/assets/cover/${meta.image}`} key="ogimage" />
                 <meta property="og:site_name" content="Baggerspion" key="ogsitename" />
                 <meta property="og:title" content={meta.title} key="ogtitle" />
