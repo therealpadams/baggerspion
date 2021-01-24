@@ -6,7 +6,7 @@ import Slides from 'components/Slides'
 
 export default function Presentation({ data }) {
     return (
-        <div className="pb-8">
+        <div className="py-8">
             <span className="block font-bold text-xl">{data.title}</span>
             <span>
                 <FontAwesomeIcon className="mr-2" icon={faCalendar} />
