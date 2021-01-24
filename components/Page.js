@@ -6,8 +6,6 @@ import Layout from 'components/Layout'
 import { MDXProvider } from '@mdx-js/react'
 import { useRouter } from 'next/router'
 
-import 'prismjs/themes/prism-okaidia.css'
-
 export default function BlogPostLayout({ meta, children }) {
     const components = {
         img: Figure
