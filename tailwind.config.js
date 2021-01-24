@@ -10,6 +10,7 @@ module.exports = {
                     css: {
                         a: {
                             "text-decoration": "none",
+                            "color": "#f59e0b",
                         },
                     },
                 },
