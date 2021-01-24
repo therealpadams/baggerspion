@@ -19,7 +19,7 @@ export default function Testimonial({ data }) {
                     height={65}
                     layout="fixed"
                 />
-                <span className="font-bold text-sm">{data.name}</span>
+                <span className="font-bold text-sm block pt-2">{data.name}</span>
                 <span className="text-sm">{data.affilliation}</span>
             </div>
         </div>
