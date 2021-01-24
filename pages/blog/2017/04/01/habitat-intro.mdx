@@ -1,4 +1,5 @@
 import Page from 'components/Page'
+import Youtube from 'components/Youtube'
 
 export const meta = {
     title: "Playing In My Local Habitat",
@@ -31,10 +32,10 @@ lifecyce... all the way from building to configuring, deploying and
 running services. It even allows for some snazzy things like deploying
 new confogurations to your services at runtime.
 
-For a fuller perspective, here is the original alunch anouncement
+For a fuller perspective, here is the original launch anouncement
 video:
 
-{% include youtube.html id="oxtRP1eYCns" %}
+<Youtube id="oxtRP1eYCns" />
 
 ## Having A Play
 
@@ -58,9 +59,7 @@ virtual environments inside Habitat caused me many, many headaches
 baulk). To be honest, this may very well be PEBCAK. Regardless, I
 ditched the venv and installed Flask without one.
 
-After this, using Habitat to build and package is super simple:
-
-{% include asciinema.html file="asciicast-110203.json" %}
+After this, using Habitat to build and package is super simple.
 
 The final step is then to checkout start-time configuration of the
 packaged service. Habitat provides great functonality for this (you
@@ -68,9 +67,7 @@ can [see the docs
 here](https://www.habitat.sh/tutorials/getting-started/mac/process-build/)).
 
 Here you can see how I provide the name "Paul" to a new instance of
-the service:
-
-{% include asciinema.html file="asciicast-110205.json" %}
+the service.
 
 ## What Next?
 
