@@ -32,22 +32,22 @@ export default function Hero({ posts }) {
                         objectFit="cover"
                     />
                     <div className="absolute flex h-full items-center px-6 md:px-12 w-screen z-10">
-                        <div className="w-full flex flex-col text-center">
+                        <div className="w-full mx-12 py-4 flex flex-col text-center rounded bg-black bg-opacity-50">
                             <Link href={`/blog${posts[position].link}`}>
-                                <a className="text-3xl font-bold hover:text-yellow-500">{posts[position].module.meta.title}</a>
+                                <a className="text-3xl font-bold text-white hover:text-yellow-500 opacity-100">{posts[position].module.meta.title}</a>
                             </Link>
-                            <span className="font-thin text-lg pt-6"><DateFormatter dateString={posts[position].module.meta.date} /> by {posts[position].module.meta.author.name}</span>
+                            <span className="text-white font-thin text-lg pt-4"><DateFormatter dateString={posts[position].module.meta.date} /> by {posts[position].module.meta.author.name}</span>
                         </div>
                     </div>
                 </div>
             )}
             <div className="absolute flex h-full items-center left-6 md:left-12 z-10">
-                <button onClick={prevHero} type="button" className="block focus:outline-none opacity-25 hover:opacity-75 hover:text-yellow-500 text-2xl">                        
+                <button onClick={prevHero} type="button" className="block focus:outline-none text-yellow-500 hover:text-black hover:opacity-50 text-2xl">                        
                     <FontAwesomeIcon icon={faChevronCircleLeft} />
                 </button> 
             </div> 
             <div className="absolute flex h-full items-center right-6 md:right-12 z-10">
-                <button onClick={nextHero} type="button" className="block focus:outline-none opacity-25 hover:opacity-75 hover:text-yellow-500 text-2xl">
+                <button onClick={nextHero} type="button" className="block focus:outline-none text-yellow-500 hover:text-black hover:opacity-50 text-2xl">
                     <FontAwesomeIcon icon={faChevronCircleRight} />
                 </button>
             </div>
