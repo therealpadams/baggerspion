@@ -6,7 +6,7 @@ import Layout from 'components/Layout'
 import { MDXProvider } from '@mdx-js/react'
 import { useRouter } from 'next/router'
 
-export default function BlogPostLayout({ meta, children }) {
+export default function Page({ meta, children }) {
     const components = {
         img: Figure
     }
@@ -18,8 +18,8 @@ export default function BlogPostLayout({ meta, children }) {
                 <meta name="twitter:card" content="summary" key="twcard" />
                 <meta name="twitter:creator" content={meta.author.twitter} key="twhandle" />
 
-                <meta property="og:url" content={`https://baggerspion.net${router.pathname}`} key="ogurl" />
-                <meta property="og:image" content={`https://baggerspion.net/assets/cover/${meta.image}`} key="ogimage" />
+                <meta property="og:url" content={`https://baggerspion.therealpadams.vercel.app${router.pathname}`} key="ogurl" />
+                <meta property="og:image" content={`https://baggerspion.therealpadams.vercel.app/assets/cover/${meta.image}`} key="ogimage" />
                 <meta property="og:site_name" content="Baggerspion" key="ogsitename" />
                 <meta property="og:title" content={meta.title} key="ogtitle" />
                 <meta property="og:description" content={meta.description} key="ogdesc" />
