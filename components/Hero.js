@@ -28,6 +28,7 @@ export default function Hero({ posts }) {
                 <div key={position} className={pointer == position + 1 ? "block" : "hidden"}>
                     <Image
                         src={`/assets/cover/${posts[position].module.meta.image}`}
+                        className="grayscale"
                         layout="fill"
                         objectFit="cover"
                     />

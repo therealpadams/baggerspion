@@ -9,6 +9,7 @@ export default function Header({ meta }) {
             <div className="relative w-full h-96 mt-12 mb-12">
                 <Image
                     src={`/assets/cover/${meta.image}`}
+                    className="grayscale"
                     layout="fill"
                     objectFit="cover"
                 />

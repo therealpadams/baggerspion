@@ -12,7 +12,7 @@ export default function Menu() {
     }
 
     return (
-        <header className="px-6 md:px-12 md:flex justify-between items-center py-4 border-b border-gray-300">
+        <header className="px-6 md:flex justify-between items-center py-4 border-b border-gray-300">
             <div className="flex items-center">
                 <div className="md:hidden mr-4">
                     <button onClick={toggle} type="button" className="block focus:outline-none">

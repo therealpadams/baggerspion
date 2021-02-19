@@ -13,7 +13,7 @@ export default function Testimonial({ data }) {
             </div>
             <div className="flex flex-col pt-6">
                 <Image
-                    className="block rounded-full"
+                    className="block rounded-full grayscale"
                     src={`/assets/testimonials/${data.image}`}
                     width={65}
                     height={65}

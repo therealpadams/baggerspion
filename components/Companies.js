@@ -8,6 +8,7 @@ export default function Companies({ data }) {
                 {data.map(company =>
                     <Image
                         key={company.name}
+                        className="grayscale"
                         width={70}
                         height={70}
                         layout="fixed"

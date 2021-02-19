@@ -8,6 +8,7 @@ export default function PageHeader({ meta }) {
             <div className="relative w-full h-96 mb-12">
                 <Image
                     src={`/assets/cover/${meta.image}`}
+                    className="grayscale"
                     layout="fill"
                     objectFit="cover"
                 />
