@@ -1,12 +1,12 @@
 import Container from 'components/Container'
 import Figure from 'components/Figure'
 import Head from 'next/head'
+import Header from 'components/Header'
 import Layout from 'components/Layout'
 import { MDXProvider } from '@mdx-js/react'
-import PageHeader from 'components/PageHeader'
 import { useRouter } from 'next/router'
 
-export default function Page({ meta, children }) {
+export default function BlogPost({ meta, children }) {
     const components = {
         img: Figure
     }
@@ -28,8 +28,8 @@ export default function Page({ meta, children }) {
                 <title>{`Baggerspion: ${meta.title}`}</title>
             </Head>
             <Layout>
-                <PageHeader meta={meta} />
                 <Container>
+                    <Header meta={meta} />
                     <MDXProvider components={components}>
                         {children}
                     </MDXProvider>

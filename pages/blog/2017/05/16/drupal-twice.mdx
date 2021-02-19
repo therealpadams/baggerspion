@@ -1,4 +1,4 @@
-import Page from 'components/Page'
+import BlogPost from 'components/BlogPost'
 
 export const meta = {
     title: 'Packaging PHP in Habitat. A Tale Of Two Drupals.',
@@ -14,7 +14,7 @@ export const meta = {
     readTime: 2
 }
 
-export default ({ children }) => <Page meta={meta}>{children}</Page>
+export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>
 
 Early in my [Habitat](https://habitat.sh) journey I packed a
 super-simple Python application that I had developed. It served no

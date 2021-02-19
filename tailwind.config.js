@@ -19,6 +19,7 @@ module.exports = {
     },
     variants: {},
     plugins: [
+        require('tailwind-filter-utilities'),
         require('@tailwindcss/typography'),
     ],
 }
