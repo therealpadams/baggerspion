@@ -23,7 +23,7 @@ export default function Hero({ posts }) {
     }
 
     return (
-        <div style={{height: '500px'}} className="relative w-screen">
+        <div style={{height: '500px'}} className="relative w-full">
             {[0, 1, 2].map(position =>
                 <div key={position} className={pointer == position + 1 ? "block" : "hidden"}>
                     <Image

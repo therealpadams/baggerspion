@@ -11,7 +11,7 @@ export default function BlogPost({ meta, children }) {
         img: Figure
     }
     const router = useRouter()
-
+    
     return (
         <>
             <Head>

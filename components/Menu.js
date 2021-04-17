@@ -12,24 +12,24 @@ export default function Menu() {
     }
 
     return (
-        <header className="px-6 md:flex justify-between items-center py-4 border-b border-gray-300">
-            <div className="flex items-center">
-                <div className="md:hidden mr-4">
-                    <button onClick={toggle} type="button" className="block focus:outline-none">
-                        <FontAwesomeIcon icon={faBars} />
-                    </button>
-                </div>
-                <div>
-                    <Link href="/"><a className="font-semibold text-2xl hover:text-yellow-500">Baggerspion.</a></Link>            
-                </div>
+        <nav className="flex justify-between md:items-center px-6 py-4 border-b border-gray-300">
+            <div className="md:flex md:justify-between md:w-full">
+                <Link href="/">
+                    <a className="font-semibold text-2xl hover:text-yellow-500">Baggerspion.</a>
+                </Link>
+                <nav className={showMe ? "grid grid-cols-1 md:flex md:space-x-4 md:items-center" : "hidden md:flex md:space-x-4 md:pt-2"}>
+                    <MenuLink href="/blog"><a onClick={toggle} className="pt-2 md:pt-0 text-sm">Blog</a></MenuLink>
+                    <MenuLink href="/presentations"><a onClick={toggle} className="text-sm">Presentations</a></MenuLink>
+                    <MenuLink href="/testimonials"><a onClick={toggle} className="text-sm">Testimonials</a></MenuLink>
+                    <MenuLink href="/about"><a onClick={toggle} className="text-sm pr-4 pb-4 md:pb-0">About</a></MenuLink>
+                    <SocialLinks />
+                </nav>
             </div>
-            <nav className={ showMe ? "grid grid-cols-1 md:flex md:space-x-4 pt-2 md:pt-0" : "hidden md:flex md:space-x-4 pt-2 md:pt-0"}>
-                <MenuLink href="/blog"><a onClick={toggle} className="pt-2 md:pt-0 text-sm">Blog</a></MenuLink>
-                <MenuLink href="/presentations"><a onClick={toggle} className="text-sm">Presentations</a></MenuLink>
-                <MenuLink href="/testimonials"><a onClick={toggle} className="text-sm">Testimonials</a></MenuLink>
-                <MenuLink href="/about"><a onClick={toggle} className="text-sm pr-4 pb-4 md:pb-0">About</a></MenuLink>
-                <SocialLinks />
-            </nav>
-        </header>
+            <div className="md:hidden">
+                <button onClick={toggle} type="button" className="focus:outline-none pt-1">
+                    <FontAwesomeIcon icon={faBars} />
+                </button>
+            </div>
+        </nav>
     )    
 }
