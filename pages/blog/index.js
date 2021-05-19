@@ -1,5 +1,5 @@
 import Archive from 'components/Archive'
-import Page from 'components/Page'
+import Page from 'components/layouts/Page'
 import RecentPosts from 'components/RecentPosts'
 
 export const meta = {

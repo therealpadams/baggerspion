@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import Page from 'components/Page'
+import Page from 'components/layouts/Page'
 import Testimonials from 'components/Testimonials'
 
 export const meta = {

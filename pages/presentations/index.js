@@ -1,5 +1,5 @@
 import fs from 'fs'
-import Page from 'components/Page'
+import Page from 'components/layouts/Page'
 import path from 'path'
 import Presentations from 'components/Presentations'
 
