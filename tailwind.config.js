@@ -11,6 +11,9 @@ module.exports = {
                         a: {
                             "text-decoration": "none",
                             "color": "#f59e0b",
+                            "&:hover": {
+                                color: "black",
+                            },
                         },
                     },
                 },
