@@ -1,6 +1,6 @@
 export default function Footnotes({ children }) {
     return (
-        <div>
+        <div className="mt-8">
             <h3>Footnotes</h3>
             {children}
         </div>
