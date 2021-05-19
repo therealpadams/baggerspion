@@ -5,7 +5,7 @@ export default function Companies({ data }) {
         <>
             <h2>Organisations With Which I've Worked</h2>
             <div className="grid grid-cols-5 gap-4">
-                {data.map(company =>
+                {data.map(company => (
                     <Image
                         key={company.name}
                         className="grayscale"
@@ -14,7 +14,7 @@ export default function Companies({ data }) {
                         layout="fixed"
                         src={`/assets/work/${company.logo}`}
                     />
-                )}
+                ))}
             </div>
         </>
     )

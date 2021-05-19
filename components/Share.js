@@ -6,16 +6,16 @@ export default function Shares() {
     return (
         <div className="flex space-x-6 text-lg">
             <Link href="#">
-                <a><FontAwesomeIcon className="hover:text-blue-800" icon={faFacebook} /></a>
+                <a><FontAwesomeIcon icon={faFacebook} /></a>
             </Link>
             <Link href="#">
-                <a><FontAwesomeIcon className="hover:text-blue-500" icon={faLinkedin} /></a>
+                <a><FontAwesomeIcon icon={faLinkedin} /></a>
             </Link>
             <Link href="#">
-                <a><FontAwesomeIcon className="hover:text-red-500" icon={faReddit} /></a>
+                <a><FontAwesomeIcon icon={faReddit} /></a>
             </Link>
             <Link href="#">
-                <a><FontAwesomeIcon className="hover:text-blue-400" icon={faTwitter} /></a>
+                <a><FontAwesomeIcon icon={faTwitter} /></a>
             </Link>
         </div>
     )
