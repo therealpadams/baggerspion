@@ -1,7 +1,7 @@
 import Container from 'components/Container'
 import Figure from 'components/Figure'
 import Head from 'next/head'
-import Layout from 'components/Layout'
+import Layout from 'components/layouts/Layout'
 import { MDXProvider } from '@mdx-js/react'
 import PageHeader from 'components/PageHeader'
 import { useRouter } from 'next/router'
