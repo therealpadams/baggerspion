@@ -1,10 +1,9 @@
-import AuthorDetail from './layouts/blog/AuthorDetail'
 import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Card({ article }) {
     return (
-        <article className="bg-gray-400 w-full h-full rounded relative">
+        <article className="bg-gray-400 w-full h-24 rounded relative">
             <Image
                 src={`/assets/cover/${article.module.meta.image}`}
                 layout="fill"
@@ -18,7 +17,6 @@ export default function Card({ article }) {
                         </a>
                     </Link>
                 </div>
-                <AuthorDetail author={article.module.meta.author} date={article.module.meta.date} />
             </div>
         </article>
     )
