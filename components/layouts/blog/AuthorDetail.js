@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function AuthorDetail({ author, date }) {
     return (
-        <div className="flex flex-row space-x-4 items-center pb-12">
+        <div className="flex flex-row space-x-4 items-center">
             <Image
                 className="block rounded-full grayscale"
                 src={`/assets/author/${author.avatar}`}

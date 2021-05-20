@@ -6,7 +6,8 @@ export default function Header({ meta }) {
         <>
             <h1 className="block ">{meta.title}</h1>
             {meta.author.name ? <AuthorDetail author={meta.author} date={meta.date} /> : ""}
-            {meta.description ? <p className="italic">{meta.description}</p> : <></>}
+            <hr />
+            {meta.description ? <p className="italic pt-4">{meta.description}</p> : <></>}
             <div className="relative w-full h-96 my-8">
                 <Image
                     src={`/assets/cover/${meta.image}`}
