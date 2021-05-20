@@ -1,23 +1,26 @@
+import DateFormatter from 'components/DateFormatter'
 import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Card({ article }) {
     return (
-        <article className="bg-gray-400 w-full h-24 rounded relative">
-            <Image
-                src={`/assets/cover/${article.module.meta.image}`}
-                layout="fill"
-                objectFit="cover"
-            />
-            <div className="flex flex-col p-4 h-full relative justify-between">
-                <div className="flex-grow">
-                    <Link className="w-2/3" href={`/blog${article.link}`}>
-                        <a>
-                            <span className="hover:text-yellow-500 font-bold text-lg">{article.module.meta.title}</span>
-                        </a>
-                    </Link>
-                </div>
+        <article className="flex flex-col">
+            <div className="relative w-full h-20">
+                <Image
+                    src={`/assets/cover/${article.module.meta.image}`}
+                    layout="fill"
+                    objectFit="cover"
+                />
             </div>
+            <div className="pt-1">
+                <Link className="w-2/3" href={`/blog${article.link}`}>
+                    <a>
+                        <span className="font-bold">{article.module.meta.title}</span>
+                    </a>
+                </Link>
+            </div>
+            <span className="text-xs font-thin"><DateFormatter dateString={article.module.meta.date} /></span>
         </article>
     )
 }
+
