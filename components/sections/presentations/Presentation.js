@@ -2,7 +2,7 @@ import DateFormatter from 'components/DateFormatter'
 import { faCalendar, faLink, faMapMarker } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
-import Slides from 'components/Slides'
+import Slides from 'components/sections/presentations/Slides'
 
 export default function Presentation({ data }) {
     return (

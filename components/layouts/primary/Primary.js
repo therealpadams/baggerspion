@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import Footer from 'components/Footer'
-import Menu from 'components/Menu'
+import Footer from 'components/layouts/primary/Footer'
+import Menu from 'components/layouts/primary/Menu'
 
 export default function Layout({ children }) {
     return (
@@ -11,7 +11,7 @@ export default function Layout({ children }) {
             </Head>
             <div className="flex flex-col h-screen">
                 <Menu />
-                <div className="flex-grow">
+                <div className="flex-grow w-full">
                     {children}
                 </div>
                 <Footer />

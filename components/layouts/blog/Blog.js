@@ -1,9 +1,8 @@
-import Container from 'components/Container'
 import Figure from 'components/Figure'
-import Footnotes from 'components/Footnotes'
+import Footnotes from 'components/sections/blog/Footnotes'
 import Head from 'next/head'
-import Header from 'components/Header'
-import Layout from 'components/layouts/Layout'
+import Header from 'components/layouts/blog/Header'
+import Layout from 'components/layouts/primary/Primary'
 import Link from 'next/link'
 import { MDXProvider } from '@mdx-js/react'
 import { useRouter } from 'next/router'
@@ -52,12 +51,12 @@ export default function BlogPost({ meta, children }) {
                 <title>{`Baggerspion: ${meta.title}`}</title>
             </Head>
             <Layout>
-                <Container>
+                <div className="px-6 pt-8 pb-12 prose mx-auto">
                     <Header meta={meta} />
                     <MDXProvider components={components}>
                         {children}
                     </MDXProvider>
-                </Container>
+                </div>
             </Layout>
         </>
     )

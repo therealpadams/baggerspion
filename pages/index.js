@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import Hero from 'components/Hero'
-import Intro from 'components/Intro'
-import Layout from 'components/layouts/Layout'
+import Hero from 'components/sections/home/Hero'
+import Intro from 'components/sections/home/Intro'
+import Layout from 'components/layouts/primary/Primary'
 import { posts } from 'lib/getAllPosts'
 
 export default function Home() {

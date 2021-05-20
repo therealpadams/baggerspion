@@ -1,4 +1,4 @@
-import Presentation from 'components/Presentation'
+import Presentation from 'components/sections/presentations/Presentation'
 
 export default function Presentations({ data }) {
     return (

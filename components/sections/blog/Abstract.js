@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import DateFormatter from './DateFormatter'
+import DateFormatter from '../../DateFormatter'
 import Link from 'next/link'
 
 export default function Abstract({ link, meta }) {

@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
-import Page from 'components/layouts/Page'
-import Testimonials from 'components/Testimonials'
+import Page from 'components/layouts/page/Page'
+import Testimonials from 'components/sections/testimonials/Testimonials'
 
 export const meta = {
     title: 'Testimonials',

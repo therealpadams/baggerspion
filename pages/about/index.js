@@ -1,7 +1,7 @@
-import Companies from 'components/Companies'
+import Companies from 'components/sections/about/Companies'
 import fs from 'fs'
 import Link from 'next/link'
-import Page from 'components/layouts/Page'
+import Page from 'components/layouts/page/Page'
 import path from 'path'
 
 export const meta = {

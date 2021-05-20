@@ -1,4 +1,4 @@
-import AuthorDetail from './AuthorDetail'
+import AuthorDetail from './layouts/blog/AuthorDetail'
 import Image from 'next/image'
 import Link from 'next/link'
 

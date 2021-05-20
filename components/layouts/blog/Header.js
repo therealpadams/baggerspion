@@ -1,13 +1,13 @@
-import AuthorDetail from 'components/AuthorDetail'
+import AuthorDetail from 'components/layouts/blog/AuthorDetail'
 import Image from 'next/image'
 
 export default function Header({ meta }) {
     return (
         <>
-            <h1 className="block pt-20">{meta.title}</h1>
+            <h1 className="block ">{meta.title}</h1>
             {meta.author.name ? <AuthorDetail author={meta.author} date={meta.date} /> : ""}
             {meta.description ? <p className="italic">{meta.description}</p> : <></>}
-            <div className="relative w-full h-96 mt-12 mb-12">
+            <div className="relative w-full h-96 my-8">
                 <Image
                     src={`/assets/cover/${meta.image}`}
                     className="grayscale"

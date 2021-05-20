@@ -1,6 +1,6 @@
-import Archive from 'components/Archive'
-import Page from 'components/layouts/Page'
-import RecentPosts from 'components/RecentPosts'
+import Archive from 'components/sections/blog/Archive'
+import Page from 'components/layouts/page/Page'
+import RecentPosts from 'components/sections/blog/RecentPosts'
 
 export const meta = {
     title: 'Blog',

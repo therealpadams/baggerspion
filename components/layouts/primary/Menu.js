@@ -2,7 +2,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link' 
 import MenuLink from './MenuLink'
-import SocialLinks from 'components/SocialLinks'
+import SocialLinks from 'components/layouts/primary/SocialLinks'
 import { useState } from 'react'
 
 export default function Menu() {
@@ -12,7 +12,7 @@ export default function Menu() {
     }
 
     return (
-        <nav className="flex justify-between md:items-center px-6 py-4 border-b border-gray-300">
+        <nav className="flex justify-between md:items-center px-6 py-4">
             <div className="md:flex md:justify-between md:w-full">
                 <Link href="/">
                     <a className="font-semibold text-2xl hover:text-yellow-500">Baggerspion.</a>

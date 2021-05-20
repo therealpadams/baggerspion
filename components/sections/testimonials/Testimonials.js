@@ -1,4 +1,4 @@
-import Testimonial from 'components/Testimonial'
+import Testimonial from 'components/sections/testimonials/Testimonial'
 
 export default function Testimonials({ data }) {
     return (

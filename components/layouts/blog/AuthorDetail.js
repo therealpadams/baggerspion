@@ -1,5 +1,4 @@
-import Container from 'components/Container'
-import DateFormatter from './DateFormatter'
+import DateFormatter from '../../DateFormatter'
 import Image from 'next/image'
 
 export default function AuthorDetail({ author, date }) {

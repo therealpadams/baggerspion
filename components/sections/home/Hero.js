@@ -1,4 +1,4 @@
-import DateFormatter from './DateFormatter'
+import DateFormatter from '../../DateFormatter'
 import { faChevronCircleLeft, faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Image from 'next/image'
@@ -32,8 +32,8 @@ export default function Hero({ posts }) {
                         layout="fill"
                         objectFit="cover"
                     />
-                    <div className="absolute flex h-full items-center px-6 md:px-12 w-screen z-10">
-                        <div className="w-full mx-12 py-4 flex flex-col text-center rounded bg-black bg-opacity-50">
+                    <div className="absolute flex w-full h-full justify-center items-center z-10">
+                        <div className="flex flex-col text-center rounded bg-black bg-opacity-50 w-full py-4 px-24">
                             <Link href={`/blog${posts[position].link}`}>
                                 <a className="text-3xl font-bold text-white hover:text-yellow-500 opacity-100">{posts[position].module.meta.title}</a>
                             </Link>
@@ -52,13 +52,13 @@ export default function Hero({ posts }) {
                     <FontAwesomeIcon icon={faChevronCircleRight} />
                 </button>
             </div>
-            <ol className="absolute flex w-screen justify-center space-x-6 list-style-none bottom-12">
+            <ul className="absolute flex w-full justify-center space-x-6 list-style-none bottom-12">
                 {[1, 2, 3].map(position => 
-                    <li key={position} className="text-3xl inline-block z-10">
+                    <li key={position} className="text-4xl inline-block z-10">
                         <button onClick={() => setPointer(position)} className={pointer === position ? "text-yellow-500 focus:outline-none" : "text-black focus:outline-none"}>•</button>
                     </li>
                 )}
-            </ol>
+            </ul>
         </div>
     )
 }

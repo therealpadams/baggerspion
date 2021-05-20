@@ -1,4 +1,4 @@
-import Abstract from 'components/Abstract'
+import Abstract from 'components/sections/blog/Abstract'
 import { posts } from 'lib/getAllPosts'
 
 export default function RecentPosts() {
