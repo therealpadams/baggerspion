@@ -31,6 +31,7 @@ export default function Hero({ posts }) {
                         className="grayscale"
                         layout="fill"
                         objectFit="cover"
+                        priority
                     />
                     <div className="absolute flex w-full h-full justify-center items-center z-10">
                         <div className="flex flex-col text-center rounded bg-black bg-opacity-50 w-full py-4 px-24">

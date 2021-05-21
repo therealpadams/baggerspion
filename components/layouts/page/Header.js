@@ -9,6 +9,7 @@ export default function PageHeader({ meta }) {
                     className="grayscale"
                     layout="fill"
                     objectFit="cover"
+                    priority
                 />
             </div>
             <div className="pb-4">
