@@ -14,6 +14,7 @@ export default function Header({ meta }) {
                     className="grayscale"
                     layout="fill"
                     objectFit="cover"
+                    priority
                 />
             </div>
         </>
