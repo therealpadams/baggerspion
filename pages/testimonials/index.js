@@ -6,7 +6,7 @@ import Testimonials from 'components/sections/testimonials/Testimonials'
 export const meta = {
     title: 'Testimonials',
     description: "I'm lucky to have collaborated with so many excellent professionals over the years; here are some of their thoughts on my work. These have been edited for brevity and the complete recmmendations can be found on my LinkedIn profile.",
-    image: 'group.jpg',
+    image: 'group.webp',
     author: {
         twitter: '@therealpadams'
     }

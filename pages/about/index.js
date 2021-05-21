@@ -7,7 +7,7 @@ import path from 'path'
 export const meta = {
     title: 'About',
     description: 'Paul Adams is an engineering leader based in Berlin.',
-    image: 'paul.jpg',
+    image: 'paul.webp',
     author: {
         twitter: '@therealpadams'
     }
