@@ -21,7 +21,7 @@ export default function Abstract({ link, meta }) {
                         <span className="block font-bold text-xl">{meta.title}</span>
                     </a>
                 </Link>
-                <span className="block font-thin">by {meta.author.name} / <DateFormatter dateString={meta.date} /></span>
+                <span className="block font-thin"><DateFormatter dateString={meta.date} /></span>
             </div>
         </div>
     )
