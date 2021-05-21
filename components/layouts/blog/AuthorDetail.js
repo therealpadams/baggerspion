@@ -10,6 +10,7 @@ export default function AuthorDetail({ author, date }) {
                 width={45}
                 height={45}
                 layout="fixed"
+                priority
             />
             <div className="flex flex-col">
                 <span className="font-bold text-sm">by {author.name}</span>
