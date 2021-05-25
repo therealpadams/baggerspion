@@ -1,0 +1,73 @@
+==================================================================
+https://keybase.io/therealpadams
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://baggerspion.net
+  * I am therealpadams (https://keybase.io/therealpadams) on keybase.
+  * I have a public key with fingerprint DEEE FBB6 2CD2 726A 7936  976D FDA4 2B06 3D3E B5AE
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "010198c16ddb9b7dabfd892327317873ffffdaccff54bdab2bcbdfe216a27ec5ef0e0a",
+      "fingerprint": "deeefbb62cd2726a7936976dfda42b063d3eb5ae",
+      "host": "keybase.io",
+      "key_id": "fda42b063d3eb5ae",
+      "kid": "010198c16ddb9b7dabfd892327317873ffffdaccff54bdab2bcbdfe216a27ec5ef0e0a",
+      "uid": "78ae121cc2a88b947de2335443515e19",
+      "username": "therealpadams"
+    },
+    "service": {
+      "hostname": "baggerspion.net",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1621930650,
+  "expire_in": 157680000,
+  "prev": "4204a72e860e2d088ac3a402af2cda3f01f9db08e12c5e23d52b8719916dd64c",
+  "seqno": 7,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+
+owGtUntQVFUcXmBdF0sWRbQxUbgmzAjSfex97BrbiK+xIazVQUpoPffec5fLLvsG
+2dDBlCHQmSAngigoDZCXJIwQNYqMKWaEPAxrEBhAq0ElNbAXCN3L6H/92fnnzPn9
+vu873+87p3Cxn0Lt87giUhVjaG7w6RxnFfvqm6qyENbOexF9FmKB8xu08tDtMVlE
+HtEjKIZiOobDKJ5ndSzNA1bgGR1O4DSB0QxNCNLiAccJAqllpS7OciwvQByjAE5D
+joQCClGARCGCaDNDl8Ml2jySLA8hFFiWwjkep3EK0DqC0tEUL2lpcRalCJ6ALAmg
+REyxu2WGZI4Fbhgt2qWadDDN2/sP/P/sO31ejmYAxHCM43DAMKxOS/MQJwhSqyVI
+jISYTga6ocsG0qCE9qRAFwRWB+BBmhs5GIVIrQyRg3K68jhPYCwwS5G4HaLdFm2D
+HknD4bJ77JzdKjVTPB6HWy+TPV6HjN4PWdMTHRMr2ngpT4mRIQlIfESPSUjOI8rC
+GIVjOgKlSDQKgZkO0QVNoowgaYpBpSXfAzMQ/T5Ei6NaQOOQoVCI8yjDAI4AWhQH
+gvQwgBBQTNDxLMpIs0uR4ARP4ixDYzqdnCul5RB5NKfNjuhpyScwSzbdotkGPOku
+iBxclO9LKBU+akXI8jDl8G/TLVF9rlQvVZz29A8u8JU/oGKRf+DTyo1tmtmXvkx+
+jhoPqOgvvX73QdDOzhJwtfnSrcun89a3fHpYeRNpbzi5lKyEZ4uSftjzXogi1NhW
+ljiQc6rgzbSxI5py59HdIcNxpQHPtwT9EvlTyL2/jJaAacPCdZXxjVpr+66Iwd6i
+AeWm3FUfNbW3KgdjbQknwnP3rj+6su778Zzp04XBq+4vPE4MXYjZ/kfP7J6ODY+b
+wvLmdvoaPgFbb1w2Wq7b7GYfRXDuAY21nI3t7a/t7BmNJyYKYXrsHJL9Ilvdfuj8
+h2vjXq6YSq4Ic7X9Wpm6sSvhLnXi68y9pzr6vPaRmrLtL2zOeWC8teyDurGfD3Wv
+KYgoiVkyc6f4CyKxP9FalLGtdmqW5LONB8Rz/wzcfnYEXXPWHbF2NLC/qqu6IXei
+LGHXZLZSve5jvw3fBvaKqovDk/U7VK9917Lm7UfqPM1Q9NK+lNjgoVHj+SvJfkmq
+asPgyObVWxLOxZy5sz8Jexcvn1ly70xkePd0VfE7c49mGrtDJ/6+9rDDlE+WkoH0
+W6NO35xm9CuD640tIckL4oLJ/LHih53ltRe9fe87A1L7Mmosqttg4+clc68vF5Vt
+Pxr9w0c0XaFByVdVR16lcrbe3PFZQu3k7j+zVmbG11xzYupjmwZR8wq/1U5qxVTB
+K5bfL1Q+o6670jrS6K9cbD9+8pIQ6WXm6qOJ+5pldsM3Pa0xhwf+BQ==
+=CWBJ
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/therealpadams
+
+==================================================================
+
