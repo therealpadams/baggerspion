@@ -7,7 +7,7 @@ export default function Archive({ posts }) {
             <h2>Older Posts</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 {posts.map(post => (
-                    <Card article={post} />
+                    <Card key={post.module.meta.title} article={post} />
                 ))}
             </div>
             <p className="text-right">
