@@ -6,7 +6,7 @@ export default function AuthorDetail({ author, date }) {
         <div className="flex flex-row space-x-4 items-center">
             <Image
                 className="block rounded-full grayscale"
-                src={`/assets/author/${author.avatar}`}
+                src={`/authors/${author.avatar}`}
                 width={45}
                 height={45}
                 layout="fixed"

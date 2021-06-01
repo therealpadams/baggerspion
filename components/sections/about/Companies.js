@@ -11,7 +11,7 @@ export default function Companies({ data }) {
                         className="grayscale"
                         width={20}
                         height={20}
-                        src={`/assets/work/${company.logo}`}
+                        src={`/employers/${company.logo}`}
                         layout="responsive"
                     />
                 ))}

@@ -7,7 +7,7 @@ export default function Abstract({ link, meta }) {
         <div className="flex flex-row space-x-4">
             <div className="flex-shrink-0">
                 <Image
-                    src={`/assets/cover/${meta.image}`}
+                    src={`/covers/${meta.image}`}
                     className="grayscale"
                     width={125}
                     height={70}

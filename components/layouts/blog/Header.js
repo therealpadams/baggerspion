@@ -10,7 +10,7 @@ export default function Header({ meta }) {
             {meta.description ? <p className="italic pt-6">{meta.description}</p> : <></>}
             <div className="relative w-full h-96 my-8">
                 <Image
-                    src={`/assets/cover/${meta.image}`}
+                    src={`/covers/${meta.image}`}
                     className="grayscale"
                     layout="fill"
                     objectFit="cover"

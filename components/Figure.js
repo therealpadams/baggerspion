@@ -6,10 +6,10 @@ export default function Figure(props) {
         <figure>
             <div className="flex flex-col text-center">
                 <div className="flex flex-row justify-center">
-                    <Link href={props.src}>
+                    <Link href={`/figures/${props.src}`}>
                         <a>
                             <Image
-                                src={props.src}
+                                src={`/figures/${props.src}`}
                                 width={500}
                                 height={200}
                                 objectFit='cover'

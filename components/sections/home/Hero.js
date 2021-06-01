@@ -27,7 +27,7 @@ export default function Hero({ posts }) {
             {[0, 1, 2].map(position =>
                 <div key={position} className={pointer == position + 1 ? "block" : "hidden"}>
                     <Image
-                        src={`/assets/cover/${posts[position].module.meta.image}`}
+                        src={`/covers/${posts[position].module.meta.image}`}
                         className="grayscale"
                         layout="fill"
                         objectFit="cover"

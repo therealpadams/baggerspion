@@ -7,7 +7,7 @@ export default function Card({ article }) {
         <article className="flex flex-col">
             <div className="relative w-full h-20">
                 <Image
-                    src={`/assets/cover/${article.module.meta.image}`}
+                    src={`/covers/${article.module.meta.image}`}
                     layout="fill"
                     objectFit="cover"
                 />

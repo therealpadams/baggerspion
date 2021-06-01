@@ -10,19 +10,9 @@ const withMDX = require("@next/mdx")({
 });
   
 module.exports = withMDX({
-    future: {
-        webpack5: true,
-    },
-    webpack: (config, { isServer }) => {
-        if (!isServer) {
-            config.resolve.fallback.fs = false;
-            config.resolve.fallback.net = false;
-            config.resolve.fallback.tls= false;
-        }
-        return config;
-    },
     pageExtensions: ["js", "jsx", "md", "mdx"],
     images: {
-        domains: ['fbcdn.net'],
+        loader: 'cloudinary',
+        path: 'https://res.cloudinary.com/baggerspion'
     },
 });
