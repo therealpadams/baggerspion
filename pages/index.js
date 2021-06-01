@@ -1,7 +1,6 @@
 import Archive from 'components/sections/home/Archive'
 import Head from 'next/head'
 import Hero from 'components/sections/home/Hero'
-import Instagram from "instagram-web-api"
 import Gallery from 'components/sections/home/Gallery'
 import Intro from 'components/sections/home/Intro'
 import Layout from 'components/layouts/primary/Primary'
@@ -21,36 +20,8 @@ export default function Home({ instagramPosts }) {
                 <Hero posts={posts.slice(0, 3)} />
                 <Intro />
                 <Archive posts={posts.slice(3, 9)} />
-                <Gallery posts={instagramPosts} />
+                <Gallery />
             </Layout>
         </>
     )
-}
-
-export async function getServerSideProps() {
-    const client = new Instagram({
-        username: process.env.IG_USERNAME,
-        password: process.env.IG_PASSWORD,
-    })
-    
-    let posts = []
-    try {
-        await client.login()
-        
-        const instagram = await client.getPhotosByUsername({
-            username: process.env.IG_USERNAME,
-        })
-    
-        if (instagram["user"]["edge_owner_to_timeline_media"]["count"] > 0) {
-            posts = instagram["user"]["edge_owner_to_timeline_media"]["edges"]
-        }
-      } catch (err) {
-        console.log("Something went wrong while fetching content from Instagram", err)
-      }
-    
-      return {
-        props: {
-            instagramPosts: posts,
-        },
-    }
 }
