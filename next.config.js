@@ -23,6 +23,6 @@ module.exports = withMDX({
     },
     pageExtensions: ["js", "jsx", "md", "mdx"],
     images: {
-        domains: ['instagram.ftxl2-1.fna.fbcdn.net'],
+        domains: ['fbcdn.net'],
     },
 });
