@@ -5,8 +5,12 @@ import Gallery from 'components/sections/home/Gallery'
 import Intro from 'components/sections/home/Intro'
 import Layout from 'components/layouts/primary/Primary'
 import { posts } from 'lib/getAllPosts'
+import Quote from 'components/sections/home/Quote'
 
-export default function Home() {
+import fs from 'fs'
+import path from 'path'
+
+export default function Home({ testimonial }) {
     const meta = {
         title: "Home",
         image: "paul.webp",
@@ -25,10 +29,26 @@ export default function Home() {
             </Head>
             <Layout meta={meta}>
                 <Hero posts={posts.slice(0, 3)} />
-                <Intro />
-                <Archive posts={posts.slice(3, 9)} />
-                <Gallery />
+                <div className="grid grid-cols-1 gap-y-12 py-12">
+                    <Intro />
+                    <Archive posts={posts.slice(3, 9)} />
+                    <Quote data={testimonial} />
+                    <Gallery />
+                </div>
             </Layout>
         </>
     )
+}
+
+export async function getServerSideProps() {
+	const filePath = path.join(process.cwd(), 'data/testimonials.json')
+	const rawData = fs.readFileSync(filePath)
+	const testimonials = Array.from(JSON.parse(rawData)['testimonials'])
+    const rn = Math.floor(Math.random() * testimonials.length)
+
+	return {
+		props: {
+			testimonial: testimonials[rn]
+		}
+	}
 }

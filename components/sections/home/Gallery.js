@@ -14,17 +14,17 @@ export default function Gallery() {
         entries.push(
             <Image
                 key={i}
-                className="filter grayscale hover:filter-none"
+                className="filter grayscale"
                 src={`/instagram/${i}.jpg`}
-                width={150}
-                height={150}
+                width={200}
+                height={200}
                 layout="responsive"
             />
         )
     }
 
     return (
-        <section className="mx-auto prose px-6 pb-12">
+        <section className="mx-auto prose px-6">
             <h2 className="text-2xl font-bold">Gallery</h2>
             <div className="grid grid-cols-3 md:grid-cols-4 gap-2">
                 {entries}
