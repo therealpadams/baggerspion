@@ -5,7 +5,7 @@ import Link from 'next/link'
 export default function Card({ article }) {
     return (
         <article className="flex flex-col">
-            <div className="relative w-full h-20">
+            <div className="relative w-full h-36">
                 <Image
                     src={`/covers/${article.module.meta.image}`}
                     layout="fill"

@@ -1,11 +1,33 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Gallery({ posts }) {
+function getPosts() {
+    let posts = []
+    for(i = 0; i < 13; ++i) {
+
+    }
+}
+
+export default function Gallery() {
+    let entries = []
+    for(var i = 1; i < 13; ++i) {
+        entries.push(
+            <Image
+                key={i}
+                className="grayscale"
+                src={`/instagram/${i}.jpg`}
+                width={150}
+                height={150}
+                layout="responsive"
+            />
+        )
+    }
+
     return (
         <section className="mx-auto prose px-6 pb-12">
             <h2 className="text-2xl font-bold">Gallery</h2>
             <div className="grid grid-cols-3 md:grid-cols-4 gap-2">
+                {entries}
             </div>
             <p className="text-right">
                 <Link href="https://www.instagram.com/therealpadams/">
