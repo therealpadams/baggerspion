@@ -15,8 +15,8 @@ export default function Testimonial({ data }) {
                 <Image
                     className="block rounded-full grayscale"
                     src={`/testimonials/${data.image}`}
-                    width={120}
-                    height={120}
+                    width={65}
+                    height={65}
                     layout="fixed"
                 />
                 <span className="font-bold text-sm block pt-2">{data.name}</span>
