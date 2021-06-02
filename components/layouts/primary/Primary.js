@@ -1,14 +1,17 @@
 import Head from 'next/head'
 import Footer from 'components/layouts/primary/Footer'
 import Menu from 'components/layouts/primary/Menu'
+import { useRouter } from 'next/router'
 
-export default function Layout({ children }) {
+export default function Layout({ children, meta }) {
+    const router = useRouter()
+
     return (
         <>
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta charSet="utf-8" />
-                
+
                 <meta name="twitter:card"       content="summary" key="twcard" />
                 <meta name="twitter:creator"    content={meta.author.twitter} key="twhandle" />
 

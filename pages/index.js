@@ -9,7 +9,13 @@ import { posts } from 'lib/getAllPosts'
 export default function Home() {
     const meta = {
         title: "Home",
-        image: "paul.webp"
+        image: "paul.webp",
+        description: "The website of Paul Adams; an engineering leader based in Berlin.",
+        author: {
+            name: 'Paul Adams',
+            avatar: 'paul.png',
+            twitter: '@therealpadams'    
+        }
     }
 
     return (

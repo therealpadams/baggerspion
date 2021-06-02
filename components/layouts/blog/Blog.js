@@ -1,14 +1,11 @@
 import Figure from 'components/Figure'
 import Footnotes from 'components/sections/blog/Footnotes'
-import Head from 'next/head'
 import Header from 'components/layouts/blog/Header'
 import Layout from 'components/layouts/primary/Primary'
 import Link from 'next/link'
 import { MDXProvider } from '@mdx-js/react'
-import { useRouter } from 'next/router'
 
 export default function BlogPost({ meta, children }) {
-    const router = useRouter()
     const components = {
         img: Figure,
         div: ({ children, className }) => {
@@ -36,7 +33,7 @@ export default function BlogPost({ meta, children }) {
     }
 
     return (
-        <Layout>
+        <Layout meta={meta}>
             <div className="px-6 pt-8 pb-12 prose mx-auto">
                 <Header meta={meta} />
                 <MDXProvider components={components}>
