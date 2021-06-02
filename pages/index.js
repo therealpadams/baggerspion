@@ -8,7 +8,8 @@ import { posts } from 'lib/getAllPosts'
 
 export default function Home() {
     const meta = {
-        title: "Home"
+        title: "Home",
+        image: "paul.webp"
     }
 
     return (
