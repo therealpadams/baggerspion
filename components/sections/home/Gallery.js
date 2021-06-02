@@ -24,7 +24,7 @@ export default function Gallery() {
     }
 
     return (
-        <section className="mx-auto prose px-6">
+        <section className="mx-auto prose px-6 w-full">
             <h2 className="text-2xl font-bold">Gallery</h2>
             <div className="grid grid-cols-3 md:grid-cols-4 gap-2">
                 {entries}
