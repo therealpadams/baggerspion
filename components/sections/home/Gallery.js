@@ -14,7 +14,7 @@ export default function Gallery() {
         entries.push(
             <Image
                 key={i}
-                className="grayscale"
+                className="filter grayscale hover:filter-none"
                 src={`/instagram/${i}.jpg`}
                 width={150}
                 height={150}
