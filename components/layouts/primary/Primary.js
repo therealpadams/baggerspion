@@ -1,22 +1,10 @@
 import Head from 'next/head'
 import Footer from 'components/layouts/primary/Footer'
 import Menu from 'components/layouts/primary/Menu'
-import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 
 export default function Layout({ children, meta }) {
     const router = useRouter()
-    const route = router.pathname.split('/')
-    const slug = route[route.length - 1
-    ]
-    useEffect(() => {
-        const registerView = () =>
-            fetch(`/api/views/${slug}`, {
-            method: 'POST'
-        })
-    
-        registerView();
-    }, [slug])
 
     return (
         <>

@@ -4,8 +4,23 @@ import Header from 'components/layouts/blog/Header'
 import Layout from 'components/layouts/primary/Primary'
 import Link from 'next/link'
 import { MDXProvider } from '@mdx-js/react'
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
 
 export default function BlogPost({ meta, children }) {
+    const router = useRouter()
+    const route = router.pathname.split('/')
+    const slug = route[route.length - 1]
+    
+    useEffect(() => {
+        const registerView = () =>
+            fetch(`/api/views/${slug}`, {
+            method: 'POST'
+        })
+    
+        registerView();
+    }, [slug])
+
     const components = {
         img: Figure,
         div: ({ children, className }) => {
