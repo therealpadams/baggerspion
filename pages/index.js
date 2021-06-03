@@ -14,7 +14,7 @@ export default function Home({ testimonial }) {
     const meta = {
         title: "Home",
         image: "paul.webp",
-        description: "The website of Paul Adams; an engineering leader based in Berlin.",
+        description: "The website of Paul Adams; an engineering lead based in Berlin.",
         author: {
             name: 'Paul Adams',
             avatar: 'paul.png',
