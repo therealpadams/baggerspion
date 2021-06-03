@@ -1,4 +1,4 @@
-import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
+import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Image from 'next/image'
 
@@ -10,6 +10,9 @@ export default function Testimonial({ data }) {
                     <FontAwesomeIcon icon={faQuoteLeft} />
                 </span>
                 <p className="prose inline">{data.content}</p>
+                <span className="text-yellow-500 text-2xl inline ml-4 align-bottom">
+                    <FontAwesomeIcon icon={faQuoteRight} />
+                </span>
             </div>
             <div className="flex flex-col pt-6">
                 <Image
