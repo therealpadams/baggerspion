@@ -1,3 +1,4 @@
+import cx from "clsx"
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link' 
@@ -17,7 +18,10 @@ export default function Menu() {
                 <Link href="/">
                     <a className="font-semibold text-2xl hover:text-yellow-500">Baggerspion.</a>
                 </Link>
-                <nav className={showMe ? "grid grid-cols-1 md:flex md:space-x-4 md:items-center" : "hidden md:flex md:space-x-4 md:pt-2"}>
+                <nav className={cx("md:flex md:space-x-4",{
+                    "grid grid-cols-1 md:items-center": showMe,
+                    "hidden md:pt-2": !showMe
+                })}>
                     <MenuLink href="/blog"><a onClick={toggle} className="pt-2 md:pt-0 text-sm">Blog</a></MenuLink>
                     <MenuLink href="/presentations"><a onClick={toggle} className="text-sm">Presentations</a></MenuLink>
                     <MenuLink href="/testimonials"><a onClick={toggle} className="text-sm">Testimonials</a></MenuLink>
@@ -25,6 +29,7 @@ export default function Menu() {
                     <SocialLinks />
                 </nav>
             </div>
+            
             <div className="md:hidden">
                 <button onClick={toggle} type="button" className="focus:outline-none pt-1">
                     <FontAwesomeIcon icon={faBars} />
