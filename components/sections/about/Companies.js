@@ -9,8 +9,8 @@ export default function Companies({ data }) {
                     <Image
                         key={index}
                         className="grayscale"
-                        width={65}
-                        height={65}
+                        width={120}
+                        height={120}
                         src={`/employers/${company.logo}`}
                         layout="responsive"
                     />
