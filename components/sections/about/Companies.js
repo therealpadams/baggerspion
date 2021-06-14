@@ -5,9 +5,9 @@ export default function Companies({ data }) {
         <>
             <h2>Organisations With Which I've Worked</h2>
             <div className="grid grid-cols-5 gap-2">
-                {data.map(company => (
+                {data.map((company, index) => (
                     <Image
-                        key={company.name}
+                        key={index}
                         className="grayscale"
                         width={65}
                         height={65}

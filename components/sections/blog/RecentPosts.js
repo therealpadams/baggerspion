@@ -6,8 +6,8 @@ export default function RecentPosts() {
         <>
             <h2>Recent Posts</h2>
             <div className="flex flex-col space-y-4">
-                {[0,1,2].map(article =>
-                    <Abstract meta={posts[article].module.meta} link={posts[article].link} />
+                {[0,1,2].map((article, index) =>
+                    <Abstract key={index} meta={posts[article].module.meta} link={posts[article].link} />
                 )}
             </div>
         </>

@@ -27,9 +27,9 @@ export default function BlogPost({ meta, children }) {
             if (className === "footnotes") {
                 const updatedFootnotes = children.map(child => {
                     if (child.props.originalType === "ol") {
-                        const updatedNotes = child.props.children.map(note => {
+                        const updatedNotes = child.props.children.map((note, index) => {
                             return (
-                                <li key={note.props.id} id={note.props.id} className="text-sm">{note.props.children[0]} <Link href={note.props.children[1].props.href}><a className="text-black">▲</a></Link></li>
+                                <li key={index} id={note.props.id} className="text-sm">{note.props.children[0]} <Link href={note.props.children[1].props.href}><a className="text-black">▲</a></Link></li>
                             )
                         })
 

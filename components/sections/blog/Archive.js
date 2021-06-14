@@ -5,8 +5,8 @@ export default function Archive() {
     return (
         <>
             <h2>Archive</h2>
-            {years.map(year =>                           
-                <Year year={year} />
+            {years.map((year, index) =>                           
+                <Year key={index} year={year} />
             )}
         </>
     )

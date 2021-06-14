@@ -10,8 +10,8 @@ export default function Year({ year }) {
         <details className="pb-2">
             <summary className="focus:outline-none">{year}</summary>
             <div className="flex flex-col space-y-4">
-                {content.map(post =>
-                    <Abstract meta={post.module.meta} link={post.link} />
+                {content.map((post, index) =>
+                    <Abstract key={index} meta={post.module.meta} link={post.link} />
                 )}
             </div>
         </details>
