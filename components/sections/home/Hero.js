@@ -1,44 +1,46 @@
+import cx from "clsx"
 import DateFormatter from '../../DateFormatter'
 import { faChevronCircleLeft, faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
+import { useInterval } from 'react-use'
 
-export default function Hero({ posts }) {
+export default function Hero({ posts, delay = 7500 }) {
     const [pointer, setPointer] = useState(1)
+    const totalPosts = posts.length
+
+    // Advance the slide
     function nextHero() {
-        if(pointer === 3) {
-            setPointer(1)
-        } else {
-            setPointer(pointer + 1)
-        }
+        pointer === totalPosts ? setPointer(1) : setPointer(pointer + 1)
     }
+
+    // Retreat the slide
     function prevHero() {
-        if(pointer === 1) {
-            setPointer(3)
-        } else {
-            setPointer(pointer - 1)
-        }
+        pointer === 1 ? setPointer(3) : setPointer(pointer - 1)
     }
+
+    // Automatically advance the slide every {delay}
+    useInterval(() => { nextHero() }, delay)
 
     return (
         <div style={{height: '500px'}} className="relative w-full">
-            {[0, 1, 2].map(position =>
-                <div key={position} className={pointer == position + 1 ? "block" : "hidden"}>
+            {posts.map((post, index) =>
+                <div key={index} className={pointer == index + 1 ? "block" : "hidden"}>
                     <Image
-                        src={`/covers/${posts[position].module.meta.image}`}
+                        src={`/covers/${post.module.meta.image}`}
                         className="grayscale"
                         layout="fill"
                         objectFit="cover"
                         priority
                     />
                     <div className="absolute flex w-full h-full justify-center items-center z-10">
-                        <div className="flex flex-col text-center rounded bg-black bg-opacity-50 w-full py-4 px-24">
-                            <Link href={`/blog${posts[position].link}`}>
-                                <a className="text-3xl font-bold text-white hover:text-yellow-500 opacity-100">{posts[position].module.meta.title}</a>
+                        <div className="flex flex-col text-center bg-black bg-opacity-50 w-full py-4 px-24">
+                            <Link href={`/blog${post.link}`}>
+                                <a className="text-3xl font-bold text-white hover:text-yellow-500 opacity-100">{post.module.meta.title}</a>
                             </Link>
-                            <span className="text-white font-thin text-lg pt-4"><DateFormatter dateString={posts[position].module.meta.date} /> by {posts[position].module.meta.author.name}</span>
+                            <span className="text-white font-thin text-lg pt-4"><DateFormatter dateString={post.module.meta.date} /> by {post.module.meta.author.name}</span>
                         </div>
                     </div>
                 </div>
@@ -54,9 +56,15 @@ export default function Hero({ posts }) {
                 </button>
             </div>
             <ul className="absolute flex w-full justify-center space-x-6 list-style-none bottom-12">
-                {[1, 2, 3].map(position => 
-                    <li key={position} className="text-4xl inline-block z-10">
-                        <button onClick={() => setPointer(position)} className={pointer === position ? "text-yellow-500 focus:outline-none" : "text-black focus:outline-none"}>•</button>
+                {posts.map((_post, index) => 
+                    <li key={index} className="text-4xl inline-block z-10">
+                        <button
+                            onClick={() => setPointer(index + 1)}
+                            className={cx("focus:outline-none", {
+                                "text-yellow-500": pointer === index + 1,
+                                "text-black": pointer !== index + 1
+                            })}
+                        >•</button>
                     </li>
                 )}
             </ul>
