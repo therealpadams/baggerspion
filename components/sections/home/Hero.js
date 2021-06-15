@@ -1,4 +1,4 @@
-import cx from "clsx"
+import cx from 'clsx'
 import DateFormatter from '../../DateFormatter'
 import { faChevronCircleLeft, faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
