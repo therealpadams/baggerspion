@@ -4,9 +4,7 @@ import Hero from 'components/sections/home/Hero'
 import Gallery from 'components/sections/home/Gallery'
 import Intro from 'components/sections/home/Intro'
 import Layout from 'components/layouts/primary/Primary'
-import { posts } from 'lib/getAllPosts'
 import Quote from 'components/sections/home/Quote'
-import useSWR from 'swr'
 
 export default function Home() {
     const meta = {
@@ -20,20 +18,17 @@ export default function Home() {
         }
     }
 
-    // Load the random testimonial
-    const { data, error } = useSWR('/api/quote')
-
     return (
         <>
             <Head>
                 <title>Baggerspion: Home</title>
             </Head>
             <Layout meta={meta}>
-                <Hero posts={posts.slice(0, 3)} />
+                <Hero />
                 <div className="grid grid-cols-1 gap-y-12 py-12">
                     <Intro />
-                    <Archive posts={posts.slice(3, 9)} />
-                    {error ? <></> : <Quote data={data} />}
+                    <Archive />
+                    <Quote />
                     <Gallery />
                 </div>
             </Layout>

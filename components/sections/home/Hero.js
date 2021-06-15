@@ -4,16 +4,17 @@ import { faChevronCircleLeft, faChevronCircleRight } from '@fortawesome/free-sol
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Image from 'next/image'
 import Link from 'next/link'
+import { posts } from 'lib/getAllPosts'
 import { useState } from 'react'
 import { useInterval } from 'react-use'
 
-export default function Hero({ posts, delay = 7500 }) {
+export default function Hero({ count = 3, delay = 7500 }) {
     const [pointer, setPointer] = useState(1)
-    const totalPosts = posts.length
+    const usePosts = posts.slice(0, count)
 
     // Advance the slide
     function nextHero() {
-        pointer === totalPosts ? setPointer(1) : setPointer(pointer + 1)
+        pointer === count ? setPointer(1) : setPointer(pointer + 1)
     }
 
     // Retreat the slide
@@ -26,7 +27,7 @@ export default function Hero({ posts, delay = 7500 }) {
 
     return (
         <div style={{height: '400px'}} className="relative w-full">
-            {posts.map((post, index) =>
+            {usePosts.map((post, index) =>
                 <div key={index} className={pointer == index + 1 ? "block" : "hidden"}>
                     <Image
                         src={`/covers/${post.module.meta.image}`}
@@ -56,7 +57,7 @@ export default function Hero({ posts, delay = 7500 }) {
                 </button>
             </div>
             <ul className="absolute flex w-full justify-center space-x-6 list-style-none bottom-12">
-                {posts.map((_post, index) => 
+                {usePosts.map((_post, index) => 
                     <li key={index} className="text-4xl inline-block z-10">
                         <button
                             onClick={() => setPointer(index + 1)}
