@@ -8,7 +8,7 @@ import { posts } from 'lib/getAllPosts'
 import { useState } from 'react'
 import { useInterval } from 'react-use'
 
-export default function Hero({ count = 3, delay = 7500 }) {
+export default function Hero({ count = 3, delay = 6500 }) {
     const [pointer, setPointer] = useState(1)
     const usePosts = posts.slice(0, count)
 
