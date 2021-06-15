@@ -1,13 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-function getPosts() {
-    let posts = []
-    for(i = 0; i < 13; ++i) {
-
-    }
-}
-
 export default function Gallery() {
     let entries = []
     for(var i = 1; i < 13; ++i) {
