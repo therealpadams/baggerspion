@@ -8,9 +8,9 @@ import Quote from 'components/sections/home/Quote'
 
 export default function Home() {
     const meta = {
-        title: "Home",
-        image: "paul.webp",
-        description: "The website of Paul Adams; an engineering lead based in Berlin.",
+        title: 'Home',
+        image: 'paul.webp',
+        description: 'The website of Paul Adams; an engineering lead based in Berlin.',
         author: {
             name: 'Paul Adams',
             avatar: 'paul.png',
