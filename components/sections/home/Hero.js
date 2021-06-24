@@ -41,7 +41,7 @@ export default function Hero({ count = 3, delay = 6500 }) {
                             <Link href={`/blog${post.link}`}>
                                 <a className="text-3xl font-bold text-white hover:text-yellow-500 opacity-100">{post.module.meta.title}</a>
                             </Link>
-                            <span className="text-white font-thin text-lg pt-4"><DateFormatter dateString={post.module.meta.date} /> by {post.module.meta.author.name}</span>
+                            <span className="text-white font-thin text-lg pt-4"><DateFormatter dateString={post.module.meta.date} /></span>
                         </div>
                     </div>
                 </div>
