@@ -1,3 +1,4 @@
+import { buildUrl } from 'cloudinary-build-url'
 import Head from 'next/head'
 import Footer from 'components/layouts/primary/Footer'
 import Menu from 'components/layouts/primary/Menu'
@@ -5,6 +6,16 @@ import { useRouter } from 'next/router'
 
 export default function Layout({ children, meta }) {
     const router = useRouter()
+    const url = buildUrl(`covers/${meta.image}`, {
+        cloud: {
+            cloudName: 'baggerspion'
+        },
+        transformations: {
+            effect: {
+                name: 'grayscale'
+            }
+        }
+    })
 
     return (
         <>
@@ -19,7 +30,7 @@ export default function Layout({ children, meta }) {
                 <meta property="og:type"        content="article" />
                 <meta property="og:title"       content={meta.title} key="ogtitle" />
                 <meta property="og:description" content={meta.description} key="ogdesc" />
-                <meta property="og:image"       content={`https://res.cloudinary.com/baggerspion/covers/${meta.image}`} key="ogimage" />
+                <meta property="og:image"       content={url} key="ogimage" />
                 <meta property="og:site_name"   content="Baggerspion" key="ogsitename" />
 
                 <title>{`Baggerspion: ${meta.title}`}</title>
