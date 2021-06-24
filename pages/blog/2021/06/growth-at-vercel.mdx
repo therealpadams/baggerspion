@@ -1,0 +1,17 @@
+import BlogPost from 'components/layouts/blog/Blog'
+
+export const meta = {
+    title: 'Growth At Vercel',
+    description: 'As part of a leadership team exercise, I followed the Clifton StrengsFinder assessment to find out more about where my skills lie as a lead.',
+    date: '2021-06-24',
+    image: 'growth.jpg',
+    author: {
+        name: 'Paul Adams',
+        avatar: 'paul.png',
+        twitter: '@therealpadams'
+    },
+}
+
+export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>
+
+## Some Content Here
