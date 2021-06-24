@@ -1,8 +1,20 @@
+import { buildUrl } from 'cloudinary-build-url';
 import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Image from 'next/image'
 
 export default function Testimonial({ data }) {
+    const url = buildUrl(`testimonials/${data.image}`, {
+        cloud: {
+            cloudName: 'baggerspion'
+        },
+        transformations: {
+            effect: {
+                name: 'grayscale'
+            }
+        }
+    })
+
     return (
         <div className="flex flex-col pt-8">
             <div>
@@ -16,8 +28,8 @@ export default function Testimonial({ data }) {
             </div>
             <div className="flex flex-col pt-6">
                 <Image
-                    className="block rounded-full grayscale"
-                    src={`/testimonials/${data.image}`}
+                    className="block rounded-full"
+                    src={url}
                     width={65}
                     height={65}
                     layout="fixed"

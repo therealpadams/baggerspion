@@ -1,13 +1,25 @@
+import { buildUrl } from 'cloudinary-build-url';
 import DateFormatter from 'components/DateFormatter'
 import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Card({ article }) {
+    const url = buildUrl(`covers/${article.module.meta.image}`, {
+        cloud: {
+            cloudName: 'baggerspion'
+        },
+        transformations: {
+            effect: {
+                name: 'grayscale'
+            }
+        }
+    }) 
+
     return (
         <article className="flex flex-col">
             <div className="relative w-full h-36">
                 <Image
-                    src={`/covers/${article.module.meta.image}`}
+                    src={url}
                     layout="fill"
                     objectFit="cover"
                 />

@@ -1,14 +1,25 @@
+import { buildUrl } from 'cloudinary-build-url';
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Gallery() {
+export default function Gallery({ count = 12 }) {
     let entries = []
-    for(var i = 1; i < 13; ++i) {
+    for(var i = 1; i <= count; ++i) {
+        const url = buildUrl(`instagram/${i}`, {
+            cloud: {
+                cloudName: 'baggerspion'
+            },
+            transformations: {
+                effect: {
+                    name: 'grayscale'
+                }
+            }
+        })
+
         entries.push(
             <Image
                 key={i}
-                className="filter grayscale"
-                src={`/instagram/${i}.jpg`}
+                src={url}
                 width={200}
                 height={200}
                 layout="responsive"

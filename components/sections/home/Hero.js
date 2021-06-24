@@ -1,3 +1,4 @@
+import { buildUrl } from 'cloudinary-build-url'
 import cx from 'clsx'
 import DateFormatter from '../../DateFormatter'
 import { faChevronCircleLeft, faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
@@ -11,6 +12,19 @@ import { useInterval } from 'react-use'
 export default function Hero({ count = 3, delay = 6500 }) {
     const [pointer, setPointer] = useState(1)
     const usePosts = posts.slice(0, count)
+
+    const urls = usePosts.map(post => {
+        return buildUrl(`covers/${post.module.meta.image}`, {
+            cloud: {
+                cloudName: 'baggerspion'
+            },
+            transformations: {
+                effect: {
+                    name: 'grayscale'
+                }
+            }
+        }) 
+    })
 
     // Advance the slide
     function nextHero() {
@@ -30,8 +44,7 @@ export default function Hero({ count = 3, delay = 6500 }) {
             {usePosts.map((post, index) =>
                 <div key={index} className={pointer == index + 1 ? "block" : "hidden"}>
                     <Image
-                        src={`/covers/${post.module.meta.image}`}
-                        className="grayscale"
+                        src={urls[index]}
                         layout="fill"
                         objectFit="cover"
                         priority

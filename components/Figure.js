@@ -1,15 +1,32 @@
+import { buildUrl } from 'cloudinary-build-url'
 import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Figure(props) {
+    const bw_url = buildUrl(`figures/${props.src}`, {
+        cloud: {
+            cloudName: 'baggerspion'
+        },
+        transformations: {
+            effect: {
+                name: 'grayscale'
+            }
+        }
+    })
+    const link_url = buildUrl(`figures/${props.src}`, {
+        cloud: {
+            cloudName: 'baggerspion'
+        }
+    })
+
     return (
         <figure>
             <div className="flex flex-col text-center">
                 <div className="flex flex-row justify-center">
-                    <Link href={`/figures/${props.src}`}>
+                    <Link href={link_url}>
                         <a>
                             <Image
-                                src={`/figures/${props.src}`}
+                                src={bw_url}
                                 width={500}
                                 height={200}
                                 objectFit='cover'
