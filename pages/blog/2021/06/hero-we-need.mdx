@@ -1,0 +1,144 @@
+import BlogPost from 'components/layouts/blog/Blog'
+
+import 'prismjs/themes/prism-okaidia.css'
+
+export const meta = {
+    title: 'The Hero We Need',
+    description: 'The few of you who remember my blog from years ago will have noticed some major changes recently. I switched Baggerspion from Jekyll/GitHub Pages to Next.js/Vercel. As someone who\'d never written a line of Javascript before, the homepage hero is something I\'m kinda proud of.',
+    date: '2021-06-26',
+    image: 'hero.jpg',
+    author: {
+        name: 'Paul Adams',
+        avatar: 'paul.png',
+        twitter: '@therealpadams'
+    },
+}
+
+export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>
+
+## The New Baggerspion
+
+After my last blog post a few people commented on the new appearance of Baggerspion. I suspect most were just surprised to see me blogging in public at all! When I joined Vercel, it was important to me that I understood our own products. Porting my blog from Jekyll/GitHub Pages to Next.js/Vercel seemed like a good place to start. Simple use case and a pet project that won't consume too much time.
+
+The switch to Next.js gave me an opportunity to introduce some other tech, too. The total stack looks a little like this:
+
+- Next.js (for the primary application)
+- Vercel (for hosting and analytics)
+- TailwindCSS (to make my life easier with styling)
+- Cloudinary (image hosting - I actually used this with the old Baggerspion, too)
+- Firebase (for keeping a simple count on hits my blog posts get)
+
+As part of this rebuild I introduced a hero section on the homepage and in this blog post I write a little about how I built it. Badly.
+
+## The Hero Section
+
+Historically, Baggerspion has never had a hero section. With this new redesign, I decided it was time to change that. My needs were simple:
+
+- Show a configurable number of recent blog posts
+- Allow manual forward/back movement
+- Auto rotate through the posts every few seconds - also configurable
+
+In the "good ol' days" I would have found some library that does this for me. But that would be too easy and not really allow me to learn anything about Next.js. So probably the best way to explain how I built the hero, is to talk you through the code...
+
+For the sake of brevity, let's ignore a bunch of imports and go straight to...
+
+### Show A Configurable Number Of Recent Blog Posts
+
+```javascript
+export default function Hero({ count = 3, delay = 6500 }) {
+    const [pointer, setPointer] = useState(1)
+    const usePosts = posts.slice(0, count)
+```
+
+So the hero is a component which takes some input (count: the number of posts to display; delay: the amount of time between transitions) with some (hopefully) sensible defaults. We also need to declare a couple of variables:
+
+- `pointer`/`setPointer`: using the React `useState()` hook to keep track of which slide in the hero should currently be shown. We set this to the first slide by default.
+- `usePosts`: earlier I import all the metadata related to my blog posts, ordered in reverse time order. I slice the array to get only the posts I need, according to the `count`.
+
+```javascript
+const urls = usePosts.map(post => {
+    return buildUrl(`covers/${post.module.meta.image}`, {
+        cloud: {
+            cloudName: 'baggerspion'
+        },
+        transformations: {
+            effect: {
+                name: 'grayscale'
+            }
+        }
+    }) 
+})
+```
+
+I use [Cloudinary](https://cloudinary.com) for the management and delivery of all images in Baggerspion. In combination with the Next.js [next/image](https://nextjs.org/docs/api-reference/next/image) component it is handles my images delivery needs perfectly.
+
+Like a lot of image CDN's, Cloudinary allows a lot of configuration of the image through the URL passed to it. next/image handles image sizes for me automatically, but I also want the images to be delivered as grayscale. The code above uses a library which automatically creates URLs to use with Cloudinary to achieve that. I create an array of URLs, one for each blog post inside the hero.
+
+Let's skip over a few lines and get straight to...
+
+```javascript
+return (
+    <div style={{height: '400px'}} className="relative w-full">
+        {usePosts.map((post, index) => (
+            <div key={index} className={pointer == index + 1 ? "block" : "hidden"}>
+```
+
+Of course I have ro return _something_. So first off I create a div of height 400pc; my chosen height for the hero. I use some inline styling because:
+
+1. TailwindCSS does not support arbitrary pixel-based block element dimensions
+1. I have no style (geddit?)
+
+The div is made the full width of the screen and is explicitly `relative` because it will act as a container for the `next/image` which will not have specified dimensions. I then go about displaying the hero image. Where the index in the loop matches `pointer` I display the image, otherwise it is hidden.
+
+```javascript
+<Image
+    src={urls[index]}
+    layout="fill"
+    objectFit="cover"
+    priority
+/>
+```
+
+This part is self-explanatory enough. But I'll take a moment to draw attention to `priority`. I _know_ this image will be above the fold. I also know that it is potentially hidden (and so `next/image`) will not even load it. By using `priority`, I ensure the image is preloaded so that it appears quickly on page load and on hero transition.
+
+Speaking of which...
+
+### Allow Manual Forward/Back Movement
+
+This is easy enough. I need a couple of functions that allow me to retreat or advance the pointer. They look like this:
+
+```javascript
+// Advance the slide
+function nextHero() {
+    pointer === count ? setPointer(1) : setPointer(pointer + 1)
+}
+
+// Retreat the slide
+function prevHero() {
+    pointer === 1 ? setPointer(3) : setPointer(pointer - 1)
+}
+```
+
+Maybe there is a more elegent way of doing this? Maybe? 🤷‍♂️ Oh well... They work and they gave me an opportunity to show that I understand the ternary operator. Elsewhere in the main div, of course, I have buttons which actually call these funtions:
+
+```javascript
+<button onClick={nextHero} type="button"...
+<button onClick={prevHero} type="button"...
+```
+
+### Auto Rotate Through The Posts
+
+By the time I had a basically-working hero I kinda gave up on the whole auto-rotate thing. That is until I read [this blog post](https://www.delbaoliveira.com/blog/challenge-01) by Delba de Oliveira. Delba is doing a series of self-directed frontend challenges, one of which was to replicate Vercel's own hero. What an idiot?! The answer had been under my nose for quite some. Well, thanks to Delba bringing my attention to it, I came up with the following:
+
+```javascript
+// Automatically advance the slide every {delay}
+useInterval(() => { nextHero() }, delay)
+```
+
+Simeple as that. Should have guessed there would be a library providing a React hhok for this somewhere!
+
+## Not All Heroes...
+
+So that's about it for all the pertinent details. You can find the complete code [over here at GitHub](https://github.com/therealpadams/baggerspion/blob/main/components/sections/home/Hero.js). I **am** strangle proud of this... purely because it works. However, as someone new to Next.js (Jasvscript **and** frontend in general!), I appreciate this is probably not the most elegant solution!
+
+Maybe someone might find this useful. Feel free to submit a PR, if you are totally offended by my coding nonsense.
