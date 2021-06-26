@@ -11,7 +11,6 @@ export default function BlogPost({ meta, children }) {
     const router = useRouter()
     const route = router.pathname.split('/')
     const slug = route[route.length - 1]
-    const environment = process.env.VERCEL_ENV
     
     useEffect(() => {
         const registerView = () =>
