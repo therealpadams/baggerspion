@@ -10,11 +10,13 @@ export default function Page({ meta, children }) {
 
     return (
         <Layout meta={meta}>
-            <div className="px-6 pt-8 pb-12 prose mx-auto">
-                <PageHeader meta={meta} />
-                <MDXProvider components={components}>
-                    {children}
-                </MDXProvider>
+            <div className="px-6 pt-8 pb-12">
+                <div className="prose mx-auto w-full">
+                    <PageHeader meta={meta} />
+                    <MDXProvider components={components}>
+                        {children}
+                    </MDXProvider>
+                </div>
             </div>
         </Layout>
     )

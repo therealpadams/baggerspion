@@ -25,7 +25,7 @@ export default function Home() {
             </Head>
             <Layout meta={meta}>
                 <Hero />
-                <div className="grid grid-cols-1 gap-y-12 py-12">
+                <div className="grid grid-cols-1 gap-y-12 py-12 px-6">
                     <Intro />
                     <Archive />
                     <Quote />

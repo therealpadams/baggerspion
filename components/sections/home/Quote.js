@@ -11,8 +11,8 @@ export default function Quote() {
     })
 
     return (
-        <div className="border border-r-0 border-l-0 border-gray-300 bg-gray-100">
-            <section className="mx-auto prose px-6 pb-10">
+        <div className="border border-r-0 border-l-0 border-gray-300 bg-gray-100 -mx-6 px-6">
+            <section className="mx-auto prose pb-10">
                 {data ? <Testimonial data={data.quote} /> : <p>Loading...</p>}
             </section>
         </div>

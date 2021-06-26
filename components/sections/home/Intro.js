@@ -1,6 +1,6 @@
 export default function Intro() {
     return (
-        <section className="mx-auto prose px-6">
+        <section className="mx-auto prose w-full">
             <h2 className="text-2xl font-bold">Welcome to Baggerspion.</h2>
             <span className="text-4xl font-bold">Engineering Leadership &amp; Culture.</span>
             <p className="mt-4">

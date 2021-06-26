@@ -49,11 +49,13 @@ export default function BlogPost({ meta, children }) {
 
     return (
         <Layout meta={meta}>
-            <div className="px-6 pt-8 pb-12 prose mx-auto">
-                <Header meta={meta} />
-                <MDXProvider components={components}>
-                    {children}
-                </MDXProvider>
+            <div className="px-6 pt-8 pb-12">
+                <div className="prose mx-auto w-full">
+                    <Header meta={meta} />
+                    <MDXProvider components={components}>
+                        {children}
+                    </MDXProvider>
+                </div>
             </div>
         </Layout>
     )
