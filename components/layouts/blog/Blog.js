@@ -14,14 +14,12 @@ export default function BlogPost({ meta, children }) {
     const environment = process.env.VERCEL_ENV
     
     useEffect(() => {
-        if(environment === "production") {
-            const registerView = () =>
-                fetch(`/api/views/${slug}`, {
-                method: 'POST'
-            })
-    
-            registerView()
-        }
+        const registerView = () =>
+            fetch(`/api/views/${slug}`, {
+            method: 'POST'
+        })
+
+        registerView()
     }, [slug])
 
     const components = {
