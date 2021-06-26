@@ -33,7 +33,7 @@ export default function Hero({ count = 3, delay = 6500 }) {
 
     // Retreat the slide
     function prevHero() {
-        pointer === 1 ? setPointer(3) : setPointer(pointer - 1)
+        pointer === 1 ? setPointer(count) : setPointer(pointer - 1)
     }
 
     // Automatically advance the slide every {delay}

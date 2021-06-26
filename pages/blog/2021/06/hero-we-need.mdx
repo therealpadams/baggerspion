@@ -83,7 +83,7 @@ return (
             <div key={index} className={pointer == index + 1 ? "block" : "hidden"}>
 ```
 
-Of course I have ro return _something_. So first off I create a div of height 400pc; my chosen height for the hero. I use some inline styling because:
+Of course I have ro return _something_. So first off I create a div of height 400px; my chosen height for the hero. I use some inline styling because:
 
 1. TailwindCSS does not support arbitrary pixel-based block element dimensions
 1. I have no style (geddit?)
@@ -99,9 +99,9 @@ The div is made the full width of the screen and is explicitly `relative` becaus
 />
 ```
 
-This part is self-explanatory enough. But I'll take a moment to draw attention to `priority`. I _know_ this image will be above the fold. I also know that it is potentially hidden (and so `next/image`) will not even load it. By using `priority`, I ensure the image is preloaded so that it appears quickly on page load and on hero transition.
+This part is self-explanatory enough. But I'll take a moment to draw attention to `priority`. I _know_ this image will be above the fold. I also know that it is potentially hidden (and so `next/image`) will not even load it. By using `priority`, I ensure the image is preloaded so that it appears quickly on page load and on hero transition. More details of next/image and its properties can be found over [in the documentation](https://nextjs.org/docs/api-reference/next/image).
 
-Speaking of which...
+Speaking of transitions...
 
 ### Allow Manual Forward/Back Movement
 
@@ -115,7 +115,7 @@ function nextHero() {
 
 // Retreat the slide
 function prevHero() {
-    pointer === 1 ? setPointer(3) : setPointer(pointer - 1)
+    pointer === 1 ? setPointer(count) : setPointer(pointer - 1)
 }
 ```
 
@@ -128,14 +128,14 @@ Maybe there is a more elegent way of doing this? Maybe? 🤷‍♂️ Oh well...
 
 ### Auto Rotate Through The Posts
 
-By the time I had a basically-working hero I kinda gave up on the whole auto-rotate thing. That is until I read [this blog post](https://www.delbaoliveira.com/blog/challenge-01) by Delba de Oliveira. Delba is doing a series of self-directed frontend challenges, one of which was to replicate Vercel's own hero. What an idiot?! The answer had been under my nose for quite some. Well, thanks to Delba bringing my attention to it, I came up with the following:
+By the time I had a basically-working hero I kinda gave up on the whole auto-rotate thing. That is until I read [this blog post](https://www.delbaoliveira.com/blog/challenge-01) by Delba de Oliveira. Delba is doing a series of self-directed frontend challenges, one of which was to replicate Vercel's own hero. What an idiot I am! The answer had been under my nose for quite some. Well, thanks to Delba bringing my attention to it, I came up with the following:
 
 ```javascript
 // Automatically advance the slide every {delay}
 useInterval(() => { nextHero() }, delay)
 ```
 
-Simeple as that. Should have guessed there would be a library providing a React hhok for this somewhere!
+Simple as that. Should have guessed there would be a library providing a React hook for this somewhere!
 
 ## Not All Heroes...
 
