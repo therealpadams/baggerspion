@@ -40,7 +40,7 @@ export default function Hero({ count = 3, delay = 6500 }) {
     useInterval(() => { nextHero() }, delay)
 
     return (
-        <div style={{height: '400px'}} className="relative w-full">
+        <div className="relative h-[400px] w-full">
             {usePosts.map((post, index) =>
                 <div key={index} className={pointer == index + 1 ? "block" : "hidden"}>
                     <Image

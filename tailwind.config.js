@@ -1,6 +1,7 @@
 const { faUnderline, faBorderNone } = require('@fortawesome/free-solid-svg-icons')
 
 module.exports = {
+    mode: 'jit',
     purge: ['./pages/**/*.js', './components/**/*.js'],  
     darkMode: false,
     theme: {

@@ -142,3 +142,13 @@ Simple as that. Should have guessed there would be a library providing a React h
 So that's about it for all the pertinent details. You can find the complete code [over here at GitHub](https://github.com/therealpadams/baggerspion/blob/main/components/sections/home/Hero.js). I **am** strangely proud of this... purely because it works. However, as someone new to Next.js (Jasvscript **and** frontend in general!), I appreciate this is probably not the most elegant solution!
 
 Maybe someone might find this useful. Feel free to submit a PR, if you are totally offended by my coding nonsense.
+
+## Update (30. June, 2021)
+
+As of version 2.1, TailwindCSS absolutely does support arbitrary pixel values, thanks to the new [JIT mode](https://tailwindcss.com/docs/just-in-time-mode). So, instead of the clunky inline style, I can set the height oif the hero as follows:
+
+```html
+<div className="relative h-[400px] w-full">
+```
+
+Delicious.
